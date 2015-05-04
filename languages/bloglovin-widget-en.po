@@ -1,0 +1,76 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bloglovin Widget\n"
+"POT-Creation-Date: 2015-05-04 00:05-0000\n"
+"PO-Revision-Date: 2015-05-04 00:05-0000\n"
+"Last-Translator: \n"
+"Language-Team: pipdig <hello@pipdig.co>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPathExcluded-0: ../.git\n"
+"X-Poedit-SearchPathExcluded-1: ../js\n"
+"X-Poedit-SearchPathExcluded-2: ../img\n"
+"X-Poedit-SearchPathExcluded-3: ../css\n"
+
+#: ../bloglovin-widget.php:57
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: ../bloglovin-widget.php:79
+msgid "settings saved."
+msgstr ""
+
+#: ../bloglovin-widget.php:90
+msgid "Enter the link to your blog&#145;s feed on Bloglovin&#145;."
+msgstr ""
+
+#: ../bloglovin-widget.php:95
+msgid "For example:"
+msgstr ""
+
+#: ../bloglovin-widget.php:98
+msgid "Bloglovin&#145; link:"
+msgstr ""
+
+#: ../bloglovin-widget.php:101
+msgid ""
+"Your follower count will update once per hour. If you change the link in the "
+"box above, then the change may not be immediate."
+msgstr ""
+
+#: ../bloglovin-widget.php:171
+msgid "Display your Bloglovin&#145; follower count."
+msgstr ""
+
+#: ../bloglovin-widget.php:172
+msgid "Bloglovin&#145; Widget"
+msgstr ""
+
+#: ../bloglovin-widget.php:192
+msgid "Followers on Bloglovin&#145;"
+msgstr ""
+
+#: ../bloglovin-widget.php:194
+msgid ""
+"Please add your Bloglovin&#145; profile link to Settings > Bloglovin&#145; "
+"in the dashboard. Then your follow count will be displayed here."
+msgstr ""
+
+#: ../bloglovin-widget.php:210
+msgid "Widget Title: (leave blank for no title)"
+msgstr ""
+
+#: ../bloglovin-widget.php:217
+#, php-format
+msgid ""
+"This widget will display your total Bloglovin&#145; follower count. Note "
+"that you will need to add your Bloglovin&#145; link to <a href=\"%s\">the "
+"options page</a> for this to work."
+msgstr ""
