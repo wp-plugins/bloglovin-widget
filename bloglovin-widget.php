@@ -141,7 +141,7 @@ function pipdig_bloglovin_menu_page() {
 <?php $bloglovin_count = get_option('pipdig_bloglovin_follower_count'); ?>
 <?php if ($bloglovin_count) { ?>
 <p><?php _e("Total count:", 'bloglovin-widget' ); ?> <?php echo $bloglovin_count; ?></p>
-<p><?php _e("Success! You can now display this in any post/page by using the shortcode <strong>[social_count]</strong>. Or you can use the widget to display your count by going to Appearance > Widgets", 'bloglovin-widget' ); ?>.</p>
+<p><?php _e("Success! You can now display this in any post/page by using the shortcode <strong>[bloglovin_count]</strong>. Or you can use the widget to display your count by going to Appearance > Widgets", 'bloglovin-widget' ); ?>.</p>
 <?php } else { ?>
 <p><?php _e("Your total follower count will be shown here after you add your link above and click save", 'bloglovin-widget' ); ?>.</p>
 <?php } //end if ?>
