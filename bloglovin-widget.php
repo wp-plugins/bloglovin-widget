@@ -10,6 +10,8 @@ Author URI: http://www.pipdig.co/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+Copyright 2015 pipdig Ltd.
+
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License, or
@@ -78,7 +80,38 @@ function pipdig_bloglovin_menu_page() {
 ?>
 <div class="updated"><p><strong><?php _e('settings saved.', 'bloglovin-widget' ); ?></strong></p></div>
 <?php
+	// initial scrape on save (can we function this?)
+	$bloglovin = file_get_contents($opt_val); //get the html returned from the following url
+	$bloglovin_doc = new DOMDocument();
 
+	libxml_use_internal_errors(TRUE); //disable libxml errors
+
+	if(!empty($bloglovin)){ //if any html is actually returned
+
+		$bloglovin_doc->loadHTML($bloglovin);
+		libxml_clear_errors(); //remove errors for yucky html
+
+		$bloglovin_xpath = new DOMXPath($bloglovin_doc);
+
+		// get contents of div class num from bloglovin, e.g. <div class="num">11 671</div>
+		$bloglovin_row = $bloglovin_xpath->query('//div[@class="num"]');
+
+		if($bloglovin_row->length > 0){
+			foreach($bloglovin_row as $row){
+				$followers = $row->nodeValue;
+				
+				// strip out spaces
+				$followers = str_replace(' ', '', $followers);
+				
+				// sanitize as integer
+				$followers_int = intval( $followers );
+				
+				// store in database
+				update_option('pipdig_bloglovin_follower_count', $followers_int);
+				
+			}
+		}
+	}
     }
 
     // Now display the settings editing screen
@@ -92,21 +125,29 @@ function pipdig_bloglovin_menu_page() {
     // settings form
     
     ?>
-<p><?php _e("For example:", 'bloglovin-widget' ); ?> <a href="https://www.bloglovin.com/blogs/lovecats-inc-uk-fashion-beauty-blog-3890264" target="_blank">https://www.bloglovin.com/blogs/lovecats-inc-uk-fashion-beauty-blog-3890264</a></p>
+<p><?php _e('For example:', 'bloglovin-widget' ); ?> <a href="https://www.bloglovin.com/blogs/lovecats-inc-uk-fashion-beauty-blog-3890264" target="_blank">https://www.bloglovin.com/blogs/lovecats-inc-uk-fashion-beauty-blog-3890264</a></p>
 <form name="form1" method="post" action="">
 <input type="hidden" name="<?php echo $hidden_field_name; ?>" value="Y">
 <p><?php _e('Bloglovin&#145; link:', 'bloglovin-widget' ); ?> 
 <input type="text" name="<?php echo $data_field_name; ?>" value="<?php echo $opt_val; ?>" placeholder="https://www.bloglovin.com/blogs/lovecats-inc-uk-fashion-beauty-blog-3890264" size="100">
 </p>
-<p style="font-style:italic"><?php _e('Your follower count will update once per hour. If you change the link in the box above, then the change may not be immediate.', 'bloglovin-widget' ); ?></p>
-<hr />
 <p class="submit">
 <input type="submit" name="Submit" class="button-primary" value="<?php esc_attr_e('Save Changes') ?>" />
 </p>
+<hr>
+<?php if ($followers_int) { ?>
+<p><?php _e('Total count:', 'bloglovin-widget' ); ?> <?php $bloglovin_count = get_option('pipdig_bloglovin_follower_count'); echo $bloglovin_count; ?></p>
+<p><?php _e("Success! You can now display this in any post/page by using the shortcode <strong>[social_count]</strong>. Or you can use the widget to display your count by going to Appearance > Widgets", 'bloglovin-widget' ); ?>.</p>
+<?php } else { ?>
+<p><?php _e('Your total follower count will be shown here after you add your link above and click save', 'bloglovin-widget' ); ?>.</p>
+<?php } //end if ?>
 </form>
 </div>
 
 <?php
+
+
+
 }
 
 
@@ -154,6 +195,7 @@ function pipdig_bl_plugin_do_this_hourly() {
 				
 				// store in database
 				update_option('pipdig_bloglovin_follower_count', $followers_int);
+				
 			}
 		}
 	}
@@ -191,7 +233,7 @@ class pipdig_widget_bloglovin extends WP_Widget {
     if (!empty($bloglovin_count)) {
 		echo '<p><a href="'. $bloglovin_url .'" target="blank" rel="nofollow" style="padding:8px 15px;background:#bce7f5;border-radius:8px;color:#555;font:10px arial,sans-serif;text-transform:uppercase;letter-spacing:1px;">' . $bloglovin_count . ' ' . __('Followers on Bloglovin&#145;', 'bloglovin-widget') . '</a></p>';
 	} else {
-		_e('Please add your Bloglovin&#145; profile link to Settings > Bloglovin&#145; in the dashboard. Then your follow count will be displayed here.', 'bloglovin-widget');
+		_e('Bloglovin follower count is being calculated. This may take up to one hour.', 'bloglovin-widget');
 	}
     // After widget code, if any
     echo (isset($after_widget)?$after_widget:'');
