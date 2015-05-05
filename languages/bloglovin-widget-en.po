@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bloglovin Widget\n"
-"POT-Creation-Date: 2015-05-04 00:05-0000\n"
-"PO-Revision-Date: 2015-05-04 00:05-0000\n"
+"POT-Creation-Date: 2015-05-05 16:14-0000\n"
+"PO-Revision-Date: 2015-05-05 16:14-0000\n"
 "Last-Translator: \n"
 "Language-Team: pipdig <hello@pipdig.co>\n"
 "Language: en\n"
@@ -19,58 +19,68 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-2: ../img\n"
 "X-Poedit-SearchPathExcluded-3: ../css\n"
 
-#: ../bloglovin-widget.php:57
+#: ../bloglovin-widget.php:59
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: ../bloglovin-widget.php:79
-msgid "settings saved."
+#: ../bloglovin-widget.php:81
+msgid "Settings saved."
 msgstr ""
 
-#: ../bloglovin-widget.php:90
-msgid "Enter the link to your blog&#145;s feed on Bloglovin&#145;."
+#: ../bloglovin-widget.php:126
+msgid "Enter the link to your blog's feed on Bloglovin'"
 msgstr ""
 
-#: ../bloglovin-widget.php:95
+#: ../bloglovin-widget.php:131
 msgid "For example:"
 msgstr ""
 
-#: ../bloglovin-widget.php:98
-msgid "Bloglovin&#145; link:"
+#: ../bloglovin-widget.php:134
+msgid "Bloglovin' link:"
 msgstr ""
 
-#: ../bloglovin-widget.php:101
+#: ../bloglovin-widget.php:143
+msgid "Total count:"
+msgstr ""
+
+#: ../bloglovin-widget.php:144
 msgid ""
-"Your follower count will update once per hour. If you change the link in the "
-"box above, then the change may not be immediate."
+"Success! You can now display this in any post/page by using the shortcode "
+"<strong>[social_count]</strong>. Or you can use the widget to display your "
+"count by going to Appearance > Widgets"
 msgstr ""
 
-#: ../bloglovin-widget.php:171
-msgid "Display your Bloglovin&#145; follower count."
-msgstr ""
-
-#: ../bloglovin-widget.php:172
-msgid "Bloglovin&#145; Widget"
-msgstr ""
-
-#: ../bloglovin-widget.php:192
-msgid "Followers on Bloglovin&#145;"
-msgstr ""
-
-#: ../bloglovin-widget.php:194
+#: ../bloglovin-widget.php:146
 msgid ""
-"Please add your Bloglovin&#145; profile link to Settings > Bloglovin&#145; "
-"in the dashboard. Then your follow count will be displayed here."
-msgstr ""
-
-#: ../bloglovin-widget.php:210
-msgid "Widget Title: (leave blank for no title)"
+"Your total follower count will be shown here after you add your link above "
+"and click save"
 msgstr ""
 
 #: ../bloglovin-widget.php:217
+msgid "Display your Bloglovin' follower count."
+msgstr ""
+
+#: ../bloglovin-widget.php:218
+msgid "Bloglovin' Widget"
+msgstr ""
+
+#: ../bloglovin-widget.php:238
+msgid "Followers on Bloglovin'"
+msgstr ""
+
+#: ../bloglovin-widget.php:240
+msgid ""
+"Bloglovin follower count is being calculated. This may take up to one hour."
+msgstr ""
+
+#: ../bloglovin-widget.php:256
+msgid "Widget Title: (leave blank for no title)"
+msgstr ""
+
+#: ../bloglovin-widget.php:263
 #, php-format
 msgid ""
-"This widget will display your total Bloglovin&#145; follower count. Note "
-"that you will need to add your Bloglovin&#145; link to <a href=\"%s\">the "
-"options page</a> for this to work."
+"This widget will display your total Bloglovin' follower count. Note that you "
+"will need to add your Bloglovin' link to <a href='%s'>the options page</a> "
+"for this to work."
 msgstr ""
