@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bloglovin Widget\n"
-"POT-Creation-Date: 2015-05-05 16:14-0000\n"
-"PO-Revision-Date: 2015-05-05 16:14-0000\n"
+"POT-Creation-Date: 2015-05-06 16:49-0000\n"
+"PO-Revision-Date: 2015-05-06 16:49-0000\n"
 "Last-Translator: \n"
 "Language-Team: pipdig <hello@pipdig.co>\n"
 "Language: en\n"
@@ -45,39 +45,49 @@ msgstr ""
 
 #: ../bloglovin-widget.php:144
 msgid ""
-"Success! You can now display this in any post/page by using the shortcode "
-"<strong>[social_count]</strong>. Or you can use the widget to display your "
-"count by going to Appearance > Widgets"
+"Success! You can now use the widget to display your count by going to "
+"Appearance > Widgets."
+msgstr ""
+
+#: ../bloglovin-widget.php:145
+msgid ""
+"You can also display your count in any post/page by using the shortcode "
+"<strong>[bloglovin_count]</strong>."
 msgstr ""
 
 #: ../bloglovin-widget.php:146
+msgid ""
+"For geeks: use <strong>do_action('bloglovin_count_here');</strong> to call "
+"the integer in your theme or plugin."
+msgstr ""
+
+#: ../bloglovin-widget.php:148
 msgid ""
 "Your total follower count will be shown here after you add your link above "
 "and click save"
 msgstr ""
 
-#: ../bloglovin-widget.php:217
+#: ../bloglovin-widget.php:219
 msgid "Display your Bloglovin' follower count."
 msgstr ""
 
-#: ../bloglovin-widget.php:218
+#: ../bloglovin-widget.php:220
 msgid "Bloglovin' Widget"
 msgstr ""
 
-#: ../bloglovin-widget.php:238
+#: ../bloglovin-widget.php:240
 msgid "Followers on Bloglovin'"
 msgstr ""
 
-#: ../bloglovin-widget.php:240
-msgid ""
-"Bloglovin follower count is being calculated. This may take up to one hour."
+#: ../bloglovin-widget.php:242
+msgid "Bloglovin follower count is being calculated. Check back soon!"
 msgstr ""
 
-#: ../bloglovin-widget.php:256
+#: ../bloglovin-widget.php:258
 msgid "Widget Title: (leave blank for no title)"
 msgstr ""
 
-#: ../bloglovin-widget.php:263
+#: ../bloglovin-widget.php:265
 #, php-format
 msgid ""
 "This widget will display your total Bloglovin' follower count. Note that you "

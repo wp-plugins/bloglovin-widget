@@ -140,8 +140,10 @@ function pipdig_bloglovin_menu_page() {
 <hr>
 <?php $bloglovin_count = get_option('pipdig_bloglovin_follower_count'); ?>
 <?php if ($bloglovin_count) { ?>
-<p><?php _e("Total count:", 'bloglovin-widget' ); ?> <?php echo $bloglovin_count; ?></p>
-<p><?php _e("Success! You can now display this in any post/page by using the shortcode <strong>[bloglovin_count]</strong>. Or you can use the widget to display your count by going to Appearance > Widgets", 'bloglovin-widget' ); ?>.</p>
+<p><strong><?php _e("Total count:", 'bloglovin-widget' ); ?></strong> <?php echo $bloglovin_count; ?></p>
+<p style="border: 2px dotted #eee; background: #86b855; display: inline; padding: 6px; margin: 10px 0; border-radius: 3px; color: #000;"><?php _e("Success! You can now use the widget to display your count by going to Appearance > Widgets.", 'bloglovin-widget' ); ?></p>
+<p><?php _e("You can also display your count in any post/page by using the shortcode <strong>[bloglovin_count]</strong>.", 'bloglovin-widget' ); ?></p>
+<?php _e("For geeks: use <strong>do_action('bloglovin_count_here');</strong> to call the integer in your theme or plugin.", 'bloglovin-widget' ) ?></p>
 <?php } else { ?>
 <p><?php _e("Your total follower count will be shown here after you add your link above and click save", 'bloglovin-widget' ); ?>.</p>
 <?php } //end if ?>
@@ -163,14 +165,14 @@ function pipdig_bloglovin_menu_page() {
 // On an early action hook, check if the hook is scheduled - if not, schedule it.
 add_action( 'wp', 'pipdig_bl_plugin_setup_schedule' );
 function pipdig_bl_plugin_setup_schedule() {
-	if ( ! wp_next_scheduled( 'pipdig_bl_plugin_hourly_event' ) ) {
-		wp_schedule_event( time(), 'hourly', 'pipdig_bl_plugin_hourly_event'); //hourly, twicedaily or daily
+	if ( ! wp_next_scheduled( 'pipdig_bl_plugin_twicedaily_event' ) ) {
+		wp_schedule_event( time(), 'twicedaily', 'pipdig_bl_plugin_twicedaily_event'); //hourly, twicedaily or daily
 	}
 }
 
 // On the scheduled action hook, run a function.
-add_action( 'pipdig_bl_plugin_hourly_event', 'pipdig_bl_plugin_do_this_hourly' );
-function pipdig_bl_plugin_do_this_hourly() {
+add_action( 'pipdig_bl_plugin_twicedaily_event', 'pipdig_bl_plugin_do_this_twicedaily' );
+function pipdig_bl_plugin_do_this_twicedaily() {
 	$bloglovin_url = get_option( 'pipdig_bloglovin_plugin_url' );
 	$bloglovin = file_get_contents($bloglovin_url); //get the html returned from the following url
 	$bloglovin_doc = new DOMDocument();
@@ -235,9 +237,9 @@ class pipdig_widget_bloglovin extends WP_Widget {
 	$bloglovin_url = get_option( 'pipdig_bloglovin_plugin_url' );
 
     if (!empty($bloglovin_count)) {
-		echo '<p><a href="'. $bloglovin_url .'" target="blank" rel="nofollow" style="padding:8px 15px;background:#bce7f5;border-radius:8px;color:#555;font:10px arial,sans-serif;text-transform:uppercase;letter-spacing:1px;">' . $bloglovin_count . ' ' . __("Followers on Bloglovin'", 'bloglovin-widget') . '</a></p>';
+		echo '<p><a href="'. $bloglovin_url .'" target="blank" rel="nofollow" class="wp-bloglovin-widget bloglovin-widget-style-1">' . $bloglovin_count . ' ' . __("Followers on Bloglovin'", 'bloglovin-widget') . '</a></p>';
 	} else {
-		_e('Bloglovin follower count is being calculated. This may take up to one hour.', 'bloglovin-widget');
+		_e('Bloglovin follower count is being calculated. Check back soon!', 'bloglovin-widget');
 	}
     // After widget code, if any
     echo (isset($after_widget)?$after_widget:'');
@@ -290,3 +292,37 @@ function pipdig_bloglovin_shortcode( $atts ){
 	return $bloglovin_count;
 }
 add_shortcode( 'bloglovin_count', 'pipdig_bloglovin_shortcode' );
+
+
+
+
+/**
+ * Template code integer call.
+ * 
+ * Use " do_action('bloglovin_count_here'); " to call integer in templates
+ * http://relearningtheweb.blogspot.com/2012/12/wordpress-create-custom-action-hook-in.html
+ * 
+ * @since 1.0
+ */
+add_action('bloglovin_count_here', 'bloglovin_count_callback');
+function bloglovin_count_callback()
+{
+	$bloglovin_count = get_option('pipdig_bloglovin_follower_count');
+	echo $bloglovin_count;
+}
+function the_action()
+{
+do_action('bloglovin_count_here');
+}
+
+
+
+/**
+ * Add styles to head
+ *
+ * @since 1.0
+ */
+function bloglovin_widget_styles() {
+	echo '<style>.bloglovin-widget-style-1{padding:8px 15px;background:#bce7f5;border-radius:8px;color:#555;font:10px arial,sans-serif;text-transform:uppercase;letter-spacing:1px;}</style>';
+}
+add_filter('wp_head', 'bloglovin_widget_styles');

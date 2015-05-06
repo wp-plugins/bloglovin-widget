@@ -13,15 +13,16 @@ A Bloglovin' Widget for WordPress which automatically displays your total follow
 
 After installing this plugin you will be able to display your total follower count from [Bloglovin'](https://www.bloglovin.com/) anywhere on your site.
 
-Simply add the link to your Bloglovin' page and this plugin will automatically fetch your follower count once per hour.  You can then display this via two options:
+Simply add the link to your Bloglovin' page and this plugin will automatically fetch your follower count.  You can then display this via two options:
 
 1. Using our pre-styled Bloglovin' widget.
 2. Display the follower count as plain text in any shortcode enabled area with `[bloglovin_count]`.
+3. Call the integer in any template/plugin file via `do_action('bloglovin_count_here');`.
 
 **Notes:**
 
 1. This plugin is in no way affiliated with Bloglovin' and has been developed by [pipdig](http://www.pipdig.co?utm_source=wordpress&utm_medium=wprepo&utm_campaign=bloglovin).
-2. The follower count is updated automatically once per hour via the WP Cron.
+2. The follower count automatically is updated twice per day.
 3. Need some help? Feel free to post any questions in the [Support Forum](https://wordpress.org/support/plugin/bloglovin-widget) and we will do our best to assist you.
 
 == Installation ==
@@ -39,7 +40,7 @@ In order to reduce server load, this plugin will check and update your total fol
 
 = I installed the plugin ...what now? =
 
-After installing and activating the plugin, you will need to go to *Settings > Bloglovin'* in your WP dashboard. In this page, enter the link to your Blog's Bloglovin' profile (not your personal profile). Now your follower count will be fetched once per hour.
+After installing and activating the plugin, you will need to go to *Settings > Bloglovin'* in your WP dashboard. On this page, enter the link to your Blog's Bloglovin' profile (not your personal profile). Now your follower count will be fetched twice per day. You can display this via our widget, shortcode or by calling a php function.
 
 == Screenshots ==
 
