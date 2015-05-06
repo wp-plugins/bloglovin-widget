@@ -13,16 +13,16 @@ A Bloglovin' Widget for WordPress which automatically displays your total follow
 
 After installing this plugin you will be able to display your total follower count from [Bloglovin'](https://www.bloglovin.com/) anywhere on your site.
 
-Simply add the link to your Bloglovin' page and this plugin will automatically fetch your follower count.  You can then display this as a widget anywhere you like.
+Simply add the link to your Bloglovin' page and this plugin will automatically fetch your follower count.
 
-**More advanced options for geeks**
+You can then display this as a widget anywhere you like.
 
 You can also call the number in plain text by:
 
 2. Using the shortcode `[bloglovin_count]`.
 3. Calling `do_action('bloglovin_count_here');` in any theme/plugin file.
 
-Notice: This plugin is in no way affiliated with Bloglovin' and has been developed by [pipdig](http://www.pipdig.co?utm_source=wordpress&utm_medium=wprepo&utm_campaign=bloglovin).
+Note: This plugin is in no way affiliated with Bloglovin' and was created by [pipdig](http://www.pipdig.co?utm_source=wordpress&utm_medium=wprepo&utm_campaign=bloglovin).
 
 == Installation ==
 
