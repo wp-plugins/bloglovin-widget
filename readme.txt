@@ -33,13 +33,17 @@ Notice: This plugin is in no way affiliated with Bloglovin' and has been develop
 
 == Frequently Asked Questions ==
 
-= I changed the link to a different Bloglovin' profile, but my count hasn't updated? =
-
-In order to reduce server load, this plugin will check and update your total follower count once per hour using the WP Cron.  Try visitng your home page, this usually updates the cron.
-
 = I installed the plugin ...what now? =
 
 After installing and activating the plugin, you will need to go to *Settings > Bloglovin'* in your WP dashboard. On this page, enter the link to your Blog's Bloglovin' profile (not your personal profile). Now your follower count will be fetched twice per day. You can display this via our widget, shortcode or by calling a php function.
+
+= Do I need to log in to Bloglovin' or enter my user details? =
+
+Nope! This plugin won't request any details other than a link to your blog's profile on Bloglovin'.  Simple as that.
+
+= Why hasn't my follower count updated? =
+
+The follower count is updated twice per day via the WordPress cron. Try visitng your site in a few hours time and see if it updates then.  If not, feel free to [contact us](https://wordpress.org/support/plugin/bloglovin-widget) and we'll be happy to help :)
 
 == Screenshots ==
 
