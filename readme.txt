@@ -29,7 +29,7 @@ Note: This plugin is in no way affiliated with Bloglovin' and was created by [pi
 1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Add your Bloglovin' link to the options page under *Settings > Bloglovin*.
-4. Add the shortcode `[bloglovin_count]` to any post/page or shortcode enabled area. This will display your total follower count in plain text.
+4. You can now add use the widget called `Bloglovin' Widget` anywhere you like. You can choose from a range of styles in this widget, or you can just display the number by itself by using the shortcode `[bloglovin_count]`.
 
 == Frequently Asked Questions ==
 
@@ -43,7 +43,7 @@ Nope! This plugin won't request any details other than a link to your blog's pro
 
 = Why hasn't my follower count updated? =
 
-The follower count is updated twice per day via the WordPress cron. Try visitng your site in a few hours time and see if it updates then.  If not, feel free to [contact us](https://wordpress.org/support/plugin/bloglovin-widget) and we'll be happy to help :)
+The follower count is updated twice per day via the WordPress cron. Try visitng your site in a few hours time and see if it updates then.  If it still won't work, feel free to [contact us](https://wordpress.org/support/plugin/bloglovin-widget) and we'll be happy to help :)
 
 == Screenshots ==
 
