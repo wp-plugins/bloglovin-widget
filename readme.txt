@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: pipdig
-Tags: bloglovin, widget, bloglovin widget, blogloving, followers, social, social counter, bloglovin follower count, bloglovin shortcode, bloglovin follow widget
+Tags: bloglovin, widget, followers, social, social counter, shortcode, feed, subscribe
 Requires at least: 3.6
 Tested up to: 4.2.1
 Stable tag: trunk
