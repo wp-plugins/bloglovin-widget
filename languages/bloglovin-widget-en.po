@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bloglovin Widget\n"
-"POT-Creation-Date: 2015-05-06 16:49-0000\n"
-"PO-Revision-Date: 2015-05-06 16:49-0000\n"
+"POT-Creation-Date: 2015-05-07 23:50-0000\n"
+"PO-Revision-Date: 2015-05-07 23:50-0000\n"
 "Last-Translator: \n"
 "Language-Team: pipdig <hello@pipdig.co>\n"
 "Language: en\n"
@@ -75,22 +75,36 @@ msgstr ""
 msgid "Bloglovin' Widget"
 msgstr ""
 
-#: ../bloglovin-widget.php:240
+#: ../bloglovin-widget.php:245 ../bloglovin-widget.php:248
+#: ../bloglovin-widget.php:251 ../bloglovin-widget.php:254
+#: ../bloglovin-widget.php:257 ../bloglovin-widget.php:260
 msgid "Followers on Bloglovin'"
 msgstr ""
 
-#: ../bloglovin-widget.php:242
-msgid "Bloglovin follower count is being calculated. Check back soon!"
+#: ../bloglovin-widget.php:265
+msgid ""
+"Widget setup not complete. Please go to Settings > Bloglovin' in the "
+"dashboard"
 msgstr ""
 
-#: ../bloglovin-widget.php:258
+#: ../bloglovin-widget.php:279
 msgid "Widget Title: (leave blank for no title)"
 msgstr ""
 
-#: ../bloglovin-widget.php:265
+#: ../bloglovin-widget.php:286
 #, php-format
 msgid ""
 "This widget will display your total Bloglovin' follower count. Note that you "
 "will need to add your Bloglovin' link to <a href='%s'>the options page</a> "
 "for this to work."
+msgstr ""
+
+#: ../bloglovin-widget.php:289
+msgid "Widget style:"
+msgstr ""
+
+#: ../bloglovin-widget.php:292 ../bloglovin-widget.php:296
+#: ../bloglovin-widget.php:300 ../bloglovin-widget.php:304
+#: ../bloglovin-widget.php:308 ../bloglovin-widget.php:312
+msgid "Style"
 msgstr ""

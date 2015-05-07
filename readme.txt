@@ -47,8 +47,7 @@ The follower count is updated twice per day via the WordPress cron. Try visitng 
 
 == Screenshots ==
 
-1. Options screen.
-2. Widget example. More styles coming soon!
+1. Widget options. More styles coming soon!
 
 == Changelog ==
 

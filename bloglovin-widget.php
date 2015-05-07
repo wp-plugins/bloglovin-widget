@@ -158,7 +158,7 @@ function pipdig_bloglovin_menu_page() {
 
 
 /**
- * Scrape contents of Bloglovin' for follower count (until API is available)
+ * Get follower count from Bloglovin' and attach to wp cron
  *
  * @since 1.0
  */
@@ -224,22 +224,45 @@ class pipdig_widget_bloglovin extends WP_Widget {
     // PART 1: Extracting the arguments + getting the values
     extract($args, EXTR_SKIP);
     $title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']);
+	$style_select = empty($instance['style_select']) ? '' : $instance['style_select'];
+
 
     // Before widget code, if any
     echo (isset($before_widget)?$before_widget:'');
    
-    // PART 2: The title
+    // The title, if any
     if (!empty($title)) {
 		echo $before_title . $title . $after_title;
 	}
 	
 	$bloglovin_count = get_option('pipdig_bloglovin_follower_count');
-	$bloglovin_url = get_option( 'pipdig_bloglovin_plugin_url' );
+	$bloglovin_url = get_option('pipdig_bloglovin_plugin_url');
 
     if (!empty($bloglovin_count)) {
-		echo '<p><a href="'. $bloglovin_url .'" target="blank" rel="nofollow" class="wp-bloglovin-widget bloglovin-widget-style-1">' . $bloglovin_count . ' ' . __("Followers on Bloglovin'", 'bloglovin-widget') . '</a></p>';
+		$bloglovin_icon = '<i class="fa fa-heart"></i>';
+		switch ( $style_select ) {
+			case '1':
+				$widget_style_output = '<p><a href="'. $bloglovin_url .'" target="blank" rel="nofollow" class="wp-bloglovin-widget bloglovin-widget-style-1">' . $bloglovin_count . ' ' . __("Followers on Bloglovin'", 'bloglovin-widget') . '</a></p>';
+				break;
+			case '2':
+				$widget_style_output = '<p><a href="'. $bloglovin_url .'" target="blank" rel="nofollow" class="wp-bloglovin-widget bloglovin-widget-style-2">' . $bloglovin_icon . ' <span class="bl-widget-num">' . $bloglovin_count . '</span> ' . __("Followers on Bloglovin'", 'bloglovin-widget') . '</a></p>';
+				break;
+			case '3':
+				$widget_style_output = '<p><a href="'. $bloglovin_url .'" target="blank" rel="nofollow" class="wp-bloglovin-widget bloglovin-widget-style-3">' . $bloglovin_icon . ' <span class="bl-widget-num">' . $bloglovin_count . '</span> ' . __("Followers on Bloglovin'", 'bloglovin-widget') . '</a></p>';
+				break;
+			case '4':
+				$widget_style_output = '<p><a href="'. $bloglovin_url .'" target="blank" rel="nofollow" class="wp-bloglovin-widget bloglovin-widget-style-4">' . $bloglovin_icon . ' <span class="bl-widget-num">' . $bloglovin_count . '</span> ' . __("Followers on Bloglovin'", 'bloglovin-widget') . '</a></p>';
+				break;
+			case '5':
+				$widget_style_output = '<p><a href="'. $bloglovin_url .'" target="blank" rel="nofollow" class="wp-bloglovin-widget bloglovin-widget-style-5">' . $bloglovin_icon . ' <span class="bl-widget-num">' . $bloglovin_count . '</span> ' . __("Followers on Bloglovin'", 'bloglovin-widget') . '</a></p>';
+				break;
+			case '6':
+				$widget_style_output = '<p><a href="'. $bloglovin_url .'" target="blank" rel="nofollow" class="wp-bloglovin-widget bloglovin-widget-style-6">' . $bloglovin_icon . ' <span class="bl-widget-num">' . $bloglovin_count . '</span> ' . __("Followers on Bloglovin'", 'bloglovin-widget') . '</a></p>';
+				break;
+		}
+		echo $widget_style_output;
 	} else {
-		_e('Bloglovin follower count is being calculated. Check back soon!', 'bloglovin-widget');
+		_e("Widget setup not complete. Please go to Settings > Bloglovin' in the dashboard", 'bloglovin-widget');
 	}
     // After widget code, if any
     echo (isset($after_widget)?$after_widget:'');
@@ -248,12 +271,10 @@ class pipdig_widget_bloglovin extends WP_Widget {
   public function form( $instance ) {
    
      // PART 1: Extract the data from the instance variable
-     $instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
-     $title = $instance['title'];
-   
-     // PART 2-3: Display the fields
-     ?>
-	 
+	$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
+	$title = $instance['title'];
+	$style_select = ( isset( $instance['style_select'] ) && is_numeric( $instance['style_select'] ) ) ? (int) $instance['style_select'] : 1;
+    ?>
 	<p>
 		<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Widget Title: (leave blank for no title)', 'bloglovin-widget'); ?>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" 
@@ -263,6 +284,35 @@ class pipdig_widget_bloglovin extends WP_Widget {
 	</p>
 	<?php $options_url = admin_url( 'options-general.php?page=bloglovin-widget' ); ?>
 	<p><?php printf(__("This widget will display your total Bloglovin' follower count. Note that you will need to add your Bloglovin' link to <a href='%s'>the options page</a> for this to work.", 'bloglovin-widget'), $options_url ); ?></p>
+	
+	<p>
+		<legend><h3><?php _e('Widget style:', 'bloglovin-widget'); ?></h3></legend><br />
+		
+		<input type="radio" id="<?php echo ($this->get_field_id( 'style_select' ) . '-1') ?>" name="<?php echo ($this->get_field_name( 'style_select' )) ?>" value="1" <?php checked( $style_select == 1, true) ?>>
+		<label for="<?php echo ($this->get_field_id( 'style_select' ) . '-1' ) ?>"><strong><?php _e('Style', 'bloglovin-widget'); ?> 1</strong></label> <br />
+		<img src="<?php echo plugins_url( 'img/demo1.png', __FILE__ ) ?>" />
+		<hr>
+		<input type="radio" id="<?php echo ($this->get_field_id( 'style_select' ) . '-2') ?>" name="<?php echo ($this->get_field_name( 'style_select' )) ?>" value="2" <?php checked( $style_select == 2, true) ?>>
+		<label for="<?php echo ($this->get_field_id( 'style_select' ) . '-2' ) ?>"><strong><?php _e('Style', 'bloglovin-widget'); ?> 2</strong></label> <br />
+		<img src="<?php echo plugins_url( 'img/demo2.png', __FILE__ ) ?>" />
+		<hr>
+		<input type="radio" id="<?php echo ($this->get_field_id( 'style_select' ) . '-3') ?>" name="<?php echo ($this->get_field_name( 'style_select' )) ?>" value="3" <?php checked( $style_select == 3, true) ?>>
+		<label for="<?php echo ($this->get_field_id( 'style_select' ) . '-3' ) ?>"><strong><?php _e('Style', 'bloglovin-widget'); ?> 3</strong></label> <br />
+		<img src="<?php echo plugins_url( 'img/demo3.png', __FILE__ ) ?>" />
+		<hr>
+		<input type="radio" id="<?php echo ($this->get_field_id( 'style_select' ) . '-4') ?>" name="<?php echo ($this->get_field_name( 'style_select' )) ?>" value="4" <?php checked( $style_select == 4, true) ?>>
+		<label for="<?php echo ($this->get_field_id( 'style_select' ) . '-4' ) ?>"><strong><?php _e('Style', 'bloglovin-widget'); ?> 4</strong></label> <br />
+		<img src="<?php echo plugins_url( 'img/demo4.png', __FILE__ ) ?>" />
+		<hr>
+		<input type="radio" id="<?php echo ($this->get_field_id( 'style_select' ) . '-5') ?>" name="<?php echo ($this->get_field_name( 'style_select' )) ?>" value="5" <?php checked( $style_select == 5, true) ?>>
+		<label for="<?php echo ($this->get_field_id( 'style_select' ) . '-5' ) ?>"><strong><?php _e('Style', 'bloglovin-widget'); ?> 5</strong></label> <br />
+		<img src="<?php echo plugins_url( 'img/demo5.png', __FILE__ ) ?>" />
+		<hr>
+		<input type="radio" id="<?php echo ($this->get_field_id( 'style_select' ) . '-6') ?>" name="<?php echo ($this->get_field_name( 'style_select' )) ?>" value="6" <?php checked( $style_select == 6, true) ?>>
+		<label for="<?php echo ($this->get_field_id( 'style_select' ) . '-6' ) ?>"><strong><?php _e('Style', 'bloglovin-widget'); ?> 6</strong></label> <br />
+		<img src="<?php echo plugins_url( 'img/demo6.png', __FILE__ ) ?>" />
+		<hr>
+	</p>
 
      <?php
    
@@ -271,6 +321,7 @@ class pipdig_widget_bloglovin extends WP_Widget {
   function update($new_instance, $old_instance) {
     $instance = $old_instance;
     $instance['title'] = strip_tags( $new_instance['title'] );
+	$instance['style_select'] = ( isset( $new_instance['style_select'] ) && $new_instance['style_select'] > 0 && $new_instance['style_select'] < 7 ) ? (int) $new_instance['style_select'] : 0; // 7 is number above total radio options
 
     return $instance;
   }
@@ -323,6 +374,84 @@ do_action('bloglovin_count_here');
  * @since 1.0
  */
 function bloglovin_widget_styles() {
-	echo '<style>.bloglovin-widget-style-1{padding:8px 15px;background:#bce7f5;border-radius:8px;color:#555;font:10px arial,sans-serif;text-transform:uppercase;letter-spacing:1px;}</style>';
+	echo '
+	<style>
+		.wp-bloglovin-widget {text-transform:uppercase;letter-spacing:1px;transition: all 0.25s ease-out; -o-transition: all 0.25s ease-out; -moz-transition: all 0.25s ease-out; -webkit-transition: all 0.25s ease-out;}
+		.wp-bloglovin-widget .fa {font-size: 12px;}
+		.bloglovin-widget-style-1{
+			padding:8px 15px;
+			background:#bce7f5;
+			border-radius:9px;
+			color:#555!important;
+			font:10px arial,sans-serif;
+		}
+		.bloglovin-widget-style-1:hover{
+			opacity:.8;
+		}
+		
+		.bloglovin-widget-style-2{
+			padding:8px 15px;
+			background:#000;
+			color:#fff!important;
+			font:10px arial,sans-serif;
+		}
+		.bloglovin-widget-style-2:hover{
+			opacity:.75;
+		}
+		
+		.bloglovin-widget-style-3{
+			padding:8px 15px;
+			background:#000;
+			color:#fff!important;
+			font:10px arial,sans-serif;
+			border: 1px solid #000;
+			box-shadow: 0 0 0 1px #fff inset, 0 0 0 1px #000 inset;
+		}
+		.bloglovin-widget-style-3:hover{
+			opacity:.75;
+		}
+		
+		.bloglovin-widget-style-4{
+			padding:8px 15px;
+			background:#fff;
+			color:#000!important;
+			font:10px arial,sans-serif;
+			border: 1px solid #000;
+		}
+		.bloglovin-widget-style-4:hover{
+			opacity:.75;
+		}
+		.bloglovin-widget-style-4 .fa {
+			color: #000;
+		}
+		
+		.bloglovin-widget-style-5{
+			padding:8px 15px;
+			background:#fff;
+			color:#000!important;
+			border: 1px dotted #ccc;
+			font:10px arial,sans-serif;
+		}
+		.bloglovin-widget-style-5:hover{
+			opacity:.75;
+		}
+		.bloglovin-widget-style-5 .fa {
+			color: #000;
+		}
+		
+		.bloglovin-widget-style-6{
+			padding:8px 15px;
+			background:#fff;
+			color:#222!important;
+			font:10px arial,sans-serif;
+			box-shadow: 0 0 8px #bbb;
+		}
+		.bloglovin-widget-style-6:hover{
+			opacity:.7;
+		}
+		.bloglovin-widget-style-6 .fa {
+			color: #888;
+		}
+	</style>';
 }
 add_filter('wp_head', 'bloglovin_widget_styles');
