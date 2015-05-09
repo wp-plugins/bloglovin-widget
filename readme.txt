@@ -15,12 +15,7 @@ After installing this plugin you will be able to display your total follower cou
 
 Simply add the link to your Bloglovin' page and this plugin will automatically fetch your follower count.
 
-You can then display this as a widget anywhere you like.
-
-You can also call the number in plain text by:
-
-2. Using the shortcode `[bloglovin_count]`.
-3. Calling `do_action('bloglovin_count_here');` in any theme/plugin file.
+You can then display this as a widget anywhere you like. Choose from 6 [preset styles](https://wordpress.org/plugins/bloglovin-widget/screenshots/) or create your own by selecting your favorite colors.
 
 Note: This plugin is in no way affiliated with Bloglovin' and was created by [pipdig](http://www.pipdig.co?utm_source=wordpress&utm_medium=wprepo&utm_campaign=bloglovin).
 
@@ -29,7 +24,7 @@ Note: This plugin is in no way affiliated with Bloglovin' and was created by [pi
 1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Add your Bloglovin' link to the options page under *Settings > Bloglovin*.
-4. You can now add use the widget called `Bloglovin' Widget` anywhere you like. You can choose from a range of styles in this widget, or you can just display the number by itself by using the shortcode `[bloglovin_count]`.
+4. You can now add use the widget called *Bloglovin' Widget* anywhere you like. You can choose from a range of styles in this widget, or you can just display the number by itself by using the shortcode `[bloglovin_count]`.
 
 == Frequently Asked Questions ==
 
@@ -48,6 +43,7 @@ The follower count is updated twice per day via the WordPress cron. Try visitng 
 == Screenshots ==
 
 1. Widget options. More styles coming soon!
+2. Customizer options.
 
 == Changelog ==
 
