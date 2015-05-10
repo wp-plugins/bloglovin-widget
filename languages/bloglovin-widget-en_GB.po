@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bloglovin Widget\n"
-"POT-Creation-Date: 2015-05-09 22:09-0000\n"
-"PO-Revision-Date: 2015-05-09 22:11-0000\n"
+"POT-Creation-Date: 2015-05-10 11:31-0000\n"
+"PO-Revision-Date: 2015-05-10 11:31-0000\n"
 "Last-Translator: \n"
 "Language-Team: pipdig <hello@pipdig.co>\n"
 "Language: en_GB\n"
@@ -63,8 +63,8 @@ msgstr ""
 
 #: ../bloglovin-widget.php:148
 msgid ""
-"Your total follower count will be shown here after you add your link above "
-"and click save"
+"Your total follower count will be displayed here after you add your link "
+"above and click save"
 msgstr ""
 
 #: ../bloglovin-widget.php:219
@@ -130,6 +130,6 @@ msgstr "Background colour"
 msgid "Text color"
 msgstr "Text colour"
 
-#: ../customizer.php:60
+#: ../customizer.php:61
 msgid "Widget Icon"
 msgstr ""
