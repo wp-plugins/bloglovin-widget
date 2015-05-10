@@ -51,7 +51,7 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'bloglo
 $wp_customize->add_setting('bloglovin_widget_icon',
 	array(
 		'default' => 'heart',
-		'sanitize_callback' => 'bloglovin_widget_sanitize_icon',
+		//'sanitize_callback' => 'bloglovin_widget_sanitize_icon',
 	)
 );
  
@@ -71,7 +71,7 @@ $wp_customize->add_control('bloglovin_widget_icon',
 }
 
 
-
+/*
 function bloglovin_widget_sanitize_icon( $input ) {
     $valid = array(
 		'heart' => 'Heart',
@@ -84,7 +84,7 @@ function bloglovin_widget_sanitize_icon( $input ) {
         return '';
     }
 }
-
+*/
 
 public static function live_preview() {
 	$plugin_url = plugins_url( 'customizer.js', __FILE__ );
