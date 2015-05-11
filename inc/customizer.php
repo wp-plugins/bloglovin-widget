@@ -18,7 +18,7 @@ $wp_customize->add_section( 'pipdig_bloglovin_widget',
 $wp_customize->add_setting('bloglovin_widget_background_color',
 	array(
 		'default' => '#000000',
-		'transport'=>'postMessage',
+		//'transport'=>'postMessage',
 		'sanitize_callback' => 'sanitize_hex_color',
 	)
 );
@@ -115,7 +115,7 @@ $output_bloglovin_widget_text_color = '';
 	// background color
 	$bloglovin_widget_background_color = get_theme_mod( 'bloglovin_widget_background_color' ); 
 	if ( ($bloglovin_widget_background_color != '#000000' && $bloglovin_widget_background_color != null) ) :
-		$output_bloglovin_widget_background_color = '.wp-bloglovin-widget{background:' . $bloglovin_widget_background_color . 'border-color:' . $bloglovin_widget_background_color . '}';
+		$output_bloglovin_widget_background_color = '.wp-bloglovin-widget{background:' . $bloglovin_widget_background_color . ';border-color:' . $bloglovin_widget_background_color . '}';
 	endif;
 	
 	// text color
