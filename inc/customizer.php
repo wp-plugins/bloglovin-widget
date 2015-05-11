@@ -87,7 +87,7 @@ function bloglovin_widget_sanitize_icon( $input ) {
 */
 
 public static function live_preview() {
-	$plugin_url = plugins_url( 'customizer.js', __FILE__ );
+	$plugin_url = plugins_url( 'inc/customizer.js', __FILE__ );
 	wp_enqueue_script( 
 		'pipdig-bloglovin-widget-customizer',
 		$plugin_url ,

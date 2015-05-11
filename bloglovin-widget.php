@@ -78,7 +78,7 @@ function pipdig_bloglovin_menu_page() {
         // Put an settings updated message on the screen
 
 ?>
-<div class="updated"><p><strong><?php _e('Settings saved.', 'bloglovin-widget' ); ?></strong></p></div>
+<div class="updated"><p><strong><?php _e('Settings saved.'); ?></strong></p></div>
 <?php
 	// initial scrape on save (can we function this?)
 	if ($opt_val) {
@@ -141,7 +141,7 @@ function pipdig_bloglovin_menu_page() {
 <?php $bloglovin_count = get_option('pipdig_bloglovin_follower_count'); ?>
 <?php if ($bloglovin_count) { ?>
 <p><strong><?php _e("Total count:", 'bloglovin-widget' ); ?></strong> <?php echo $bloglovin_count; ?></p>
-<p style="border: 2px dotted #eee; background: #86b855; display: inline; padding: 6px; margin: 10px 0; border-radius: 3px; color: #000;"><?php _e("Success! You can now use the widget to display your count by going to Appearance > Widgets.", 'bloglovin-widget' ); ?></p>
+<p style="border: 1px solid #000; background: #86b855; display: inline; padding: 6px; margin: 15px 0; border-radius: 4px; color: #000;"><?php $widgets_url = admin_url( 'widgets.php' ); printf(__("Success! You can now use the widget to display your count by going to the <a href='%s'>Widgets section</a> of the dashboard", 'bloglovin-widget'), $widgets_url ); ?></p>
 <p><?php _e("You can also display your count in any post/page by using the shortcode <strong>[bloglovin_count]</strong>.", 'bloglovin-widget' ); ?></p>
 <?php _e("For geeks: use <strong>do_action('bloglovin_count_here');</strong> to call the integer in your theme or plugin.", 'bloglovin-widget' ) ?></p>
 <?php } else { ?>
@@ -383,8 +383,7 @@ do_action('bloglovin_count_here');
  * @since 1.0
  */
 function bloglovin_widget_styles() {
-	echo '
-	<style>.wp-bloglovin-widget{text-transform:uppercase;letter-spacing:1px;transition:all .25s ease-out;-o-transition:all .25s ease-out;-moz-transition:all .25s ease-out;-webkit-transition:all .25s ease-out}.wp-bloglovin-widget .fa{font-size:12px}.bloglovin-widget-style-1{padding:8px 15px;background:#bce7f5;border-radius:9px;color:#555!important;font:10px arial,sans-serif}.bloglovin-widget-style-1:hover{opacity:.8}.bloglovin-widget-style-2{padding:8px 15px;background:#000;color:#fff!important;font:10px arial,sans-serif}.bloglovin-widget-style-2:hover{opacity:.75}.bloglovin-widget-style-3{padding:8px 15px;background:#000;color:#fff!important;font:10px arial,sans-serif;border:1px solid #000;box-shadow:0 0 0 1px #fff inset,0 0 0 1px #000 inset}.bloglovin-widget-style-3:hover{opacity:.75}.bloglovin-widget-style-4{padding:8px 15px;background:#fff;color:#000!important;font:10px arial,sans-serif;border:1px solid #000}.bloglovin-widget-style-4:hover{opacity:.75}.bloglovin-widget-style-4 .fa{color:#000}.bloglovin-widget-style-5{padding:8px 15px;background:#fff;color:#000!important;border:1px dotted #ccc;font:10px arial,sans-serif}.bloglovin-widget-style-5:hover{opacity:.75}.bloglovin-widget-style-5 .fa{color:#000}.bloglovin-widget-style-6{padding:8px 15px;background:#fff;color:#222!important;font:10px arial,sans-serif;box-shadow:0 0 8px #bbb}.bloglovin-widget-style-6:hover{opacity:.7}.bloglovin-widget-style-6 .fa{color:#888}</style>';
+	echo '<style>.wp-bloglovin-widget{text-transform:uppercase;letter-spacing:1px;transition:all .25s ease-out;-o-transition:all .25s ease-out;-moz-transition:all .25s ease-out;-webkit-transition:all .25s ease-out}.wp-bloglovin-widget .fa{font-size:12px}.bloglovin-widget-style-1{padding:8px 15px;background:#bce7f5;border-radius:9px;color:#555!important;font:10px arial,sans-serif}.bloglovin-widget-style-1:hover{opacity:.8}.bloglovin-widget-style-2{padding:8px 15px;background:#000;color:#fff!important;font:10px arial,sans-serif}.bloglovin-widget-style-2:hover{opacity:.75}.bloglovin-widget-style-3{padding:8px 15px;background:#000;color:#fff!important;font:10px arial,sans-serif;border:1px solid #000;box-shadow:0 0 0 1px #fff inset,0 0 0 1px #000 inset}.bloglovin-widget-style-3:hover{opacity:.75}.bloglovin-widget-style-4{padding:8px 15px;background:#fff;color:#000!important;font:10px arial,sans-serif;border:1px solid #000}.bloglovin-widget-style-4:hover{opacity:.75}.bloglovin-widget-style-4 .fa{color:#000}.bloglovin-widget-style-5{padding:8px 15px;background:#fff;color:#000!important;border:1px dotted #ccc;font:10px arial,sans-serif}.bloglovin-widget-style-5:hover{opacity:.75}.bloglovin-widget-style-5 .fa{color:#000}.bloglovin-widget-style-6{padding:8px 15px;background:#fff;color:#222!important;font:10px arial,sans-serif;box-shadow:0 0 8px #bbb}.bloglovin-widget-style-6:hover{opacity:.7}.bloglovin-widget-style-6 .fa{color:#888}</style>';
 }
 add_filter('wp_head', 'bloglovin_widget_styles');
 
@@ -394,4 +393,4 @@ add_filter('wp_head', 'bloglovin_widget_styles');
  *
  * @since 1.0
  */
-require_once('customizer.php');
+require_once('inc/customizer.php');

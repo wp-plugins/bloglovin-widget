@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bloglovin Widget\n"
-"POT-Creation-Date: 2015-05-10 11:31-0000\n"
-"PO-Revision-Date: 2015-05-10 11:31-0000\n"
+"POT-Creation-Date: 2015-05-11 15:58-0000\n"
+"PO-Revision-Date: 2015-05-11 15:58-0000\n"
 "Last-Translator: \n"
 "Language-Team: pipdig <hello@pipdig.co>\n"
 "Language: en\n"
@@ -44,9 +44,10 @@ msgid "Total count:"
 msgstr ""
 
 #: ../bloglovin-widget.php:144
+#, php-format
 msgid ""
-"Success! You can now use the widget to display your count by going to "
-"Appearance > Widgets."
+"Success! You can now use the widget to display your count by going to the <a "
+"href='%s'>Widgets section</a> of the dashboard"
 msgstr ""
 
 #: ../bloglovin-widget.php:145
@@ -71,7 +72,7 @@ msgstr ""
 msgid "Display your Bloglovin' follower count."
 msgstr ""
 
-#: ../bloglovin-widget.php:220 ../customizer.php:9
+#: ../bloglovin-widget.php:220 ../inc/customizer.php:9
 msgid "Bloglovin' Widget"
 msgstr ""
 
@@ -116,18 +117,18 @@ msgstr ""
 msgid "Style"
 msgstr ""
 
-#: ../customizer.php:11
+#: ../inc/customizer.php:11
 msgid "Use these options to style your Bloglovin' Widget."
 msgstr ""
 
-#: ../customizer.php:27
+#: ../inc/customizer.php:27
 msgid "Background color"
 msgstr ""
 
-#: ../customizer.php:44
+#: ../inc/customizer.php:44
 msgid "Text color"
 msgstr ""
 
-#: ../customizer.php:61
+#: ../inc/customizer.php:61
 msgid "Widget Icon"
 msgstr ""
