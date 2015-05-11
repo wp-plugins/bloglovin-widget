@@ -121,7 +121,7 @@ $output_bloglovin_widget_text_color = '';
 	// text color
 	$bloglovin_widget_text_color = get_theme_mod( 'bloglovin_widget_text_color' ); 
 	if ( ($bloglovin_widget_text_color != '#000000' && $bloglovin_widget_text_color != null) ) :
-		$output_bloglovin_widget_text_color = '.wp-bloglovin-widget{color:' . $bloglovin_widget_text_color . '!important}';
+		$output_bloglovin_widget_text_color = '.wp-bloglovin-widget,.wp-bloglovin-widget.bloglovin-widget-style-1{color:' . $bloglovin_widget_text_color . '!important}';
 	endif;
 
 	
