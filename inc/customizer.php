@@ -61,9 +61,9 @@ $wp_customize->add_control('bloglovin_widget_icon',
 		'label' => __( 'Widget Icon', 'bloglovin-widget' ),
 		'section' => 'pipdig_bloglovin_widget',
 		'choices' => array(
-			'heart' => 'Heart',
-			'plus' => 'Plus',
-			'' => 'None',
+			'heart' => __( 'Heart', 'bloglovin-widget' ),
+			'plus' => __( 'Plus', 'bloglovin-widget' ),
+			'' => __( 'None', 'bloglovin-widget' ),
 		),
 	)
 );

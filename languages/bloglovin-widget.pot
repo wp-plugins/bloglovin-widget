@@ -5,7 +5,7 @@ msgstr ""
 "PO-Revision-Date: 2015-05-16 20:45-0000\n"
 "Last-Translator: \n"
 "Language-Team: pipdig <hello@pipdig.co>\n"
-"Language: en_GB\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -113,8 +113,6 @@ msgid ""
 "Select a style from below, or choose your own colors in the <em>Bloglovin' "
 "Widget</em> section of the <a href='%s'>Customizer</a>."
 msgstr ""
-"Select a style from below, or choose your own colors in the <em>Bloglovin' "
-"Widget</em> section of the <a href='%s'>Customiser</a>."
 
 #: ../bloglovin-widget.php:300
 msgid "Widget style:"
@@ -132,11 +130,11 @@ msgstr ""
 
 #: ../inc/customizer.php:27
 msgid "Background color"
-msgstr "Background colour"
+msgstr ""
 
 #: ../inc/customizer.php:44
 msgid "Text color"
-msgstr "Text colour"
+msgstr ""
 
 #: ../inc/customizer.php:61
 msgid "Widget Icon"
