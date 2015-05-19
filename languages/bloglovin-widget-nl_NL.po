@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bloglovin Widget\n"
-"POT-Creation-Date: 2015-05-18 12:28-0000\n"
-"PO-Revision-Date: 2015-05-18 12:28-0000\n"
+"POT-Creation-Date: 2015-05-18 12:25-0000\n"
+"PO-Revision-Date: 2015-05-18 12:25-0000\n"
 "Last-Translator: \n"
 "Language-Team: pipdig <hello@pipdig.co>\n"
-"Language: en_GB\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,19 +21,19 @@ msgstr ""
 
 #: ../bloglovin-widget.php:59
 msgid "You do not have sufficient permissions to access this page."
-msgstr ""
+msgstr "Je hebt onvoldoende rechten voor toegang van deze pagina."
 
 #: ../bloglovin-widget.php:81
 msgid "Settings saved."
-msgstr ""
+msgstr "Instellingen opgeslagen."
 
 #: ../bloglovin-widget.php:126
 msgid "Enter the link to your blog's feed on Bloglovin'"
-msgstr ""
+msgstr "Voer hier de link naar je Bloglovin' feed toe"
 
 #: ../bloglovin-widget.php:131
 msgid "For example:"
-msgstr ""
+msgstr "Bijvoorbeeld:"
 
 #: ../bloglovin-widget.php:134
 msgid "Bloglovin' link:"
@@ -45,10 +45,12 @@ msgid ""
 "theme. <a href='http://www.pipdig.co/contact' target='_blank'>Contact us</a> "
 "for details."
 msgstr ""
+"We willen Ilse graag bedanken voor het vertalen van deze plugin. Bekijk snel "
+"haar blog op <a href='http://www.phood.nl' target='_blank'>www.phood.nl</a>!"
 
 #: ../bloglovin-widget.php:144
 msgid "Total count:"
-msgstr ""
+msgstr "Totale teller:"
 
 #: ../bloglovin-widget.php:145
 #, php-format
@@ -56,22 +58,28 @@ msgid ""
 "Success! You can now use the widget to display your count by going to the <a "
 "href='%s'>Widgets section</a> of the dashboard."
 msgstr ""
+"Gelukt! Je kunt nu de widget gebruiken om de teller te tonen door naar <a "
+"href='%s'>Weergave > Widgets</a> te gaan."
 
 #: ../bloglovin-widget.php:146
 msgid ""
 "You can also display your count in any post/page by using the shortcode "
 "<strong>[bloglovin_count]</strong>."
 msgstr ""
+"Je kunt ook je teller tonen in elk bericht/pagina door de shortcode "
+"<strong>[bloglovin_count]</strong> te plaatsen. "
 
 #: ../bloglovin-widget.php:149
 msgid ""
 "Your total follower count will be displayed here after you add your link "
 "above and click save"
 msgstr ""
+"Je totale volgersteller zal hier worden getoond nadat je je link hierboven "
+"hebt ingevoerd en op opslaan hebt geklikt"
 
 #: ../bloglovin-widget.php:155
 msgid "Looking for a more professional WordPress theme?"
-msgstr ""
+msgstr "Op zoek naar een nieuw WordPress thema?"
 
 #: ../bloglovin-widget.php:156
 msgid ""
@@ -80,10 +88,14 @@ msgid ""
 "utm_source=wordpress&utm_medium=bloglovin&utm_campaign=bloglovin' "
 "target='_blank'>www.pipdig.co</a> by using coupon code 'nextlevel'."
 msgstr ""
+"Je kunt onze creaties vinden op <a href='http://www.pipdig.co/products/"
+"premade-wordpress-themes/?"
+"utm_source=wordpress&utm_medium=bloglovin&utm_campaign=bloglovin' "
+"target='_blank'>www.pipdig.co</a>."
 
 #: ../bloglovin-widget.php:222
 msgid "Display your Bloglovin' follower count."
-msgstr ""
+msgstr "Deze widget zal je Bloglovin' volgersteller tonen."
 
 #: ../bloglovin-widget.php:223 ../inc/customizer.php:9
 msgid "Bloglovin' Widget"
@@ -93,17 +105,19 @@ msgstr ""
 #: ../bloglovin-widget.php:259 ../bloglovin-widget.php:262
 #: ../bloglovin-widget.php:265 ../bloglovin-widget.php:268
 msgid "Followers on Bloglovin'"
-msgstr ""
+msgstr "volgers op Bloglovin'"
 
 #: ../bloglovin-widget.php:273
 msgid ""
 "Widget setup not complete. Please go to Settings > Bloglovin' in the "
 "dashboard"
 msgstr ""
+"Widget instellingen niet compleet. Ga naar Instellingen > Bloglovin' in het "
+"dashboard"
 
 #: ../bloglovin-widget.php:287
 msgid "Widget Title: (leave blank for no title)"
-msgstr ""
+msgstr "Widget titel (laat open voor geen titel):"
 
 #: ../bloglovin-widget.php:297
 #, php-format
@@ -112,6 +126,9 @@ msgid ""
 "will need to add your Bloglovin' link to <a href='%s'>the options page</a> "
 "for this to work."
 msgstr ""
+"Deze widget zal je totale Bloglovin' volgersteller tonen. Let wel op dat je "
+"je Bloglovin' link moet toevoegen aan <a href='%s'>de instellingen pagina</"
+"a> wil dit werken."
 
 #: ../bloglovin-widget.php:298
 #, php-format
@@ -119,38 +136,38 @@ msgid ""
 "Select a style from below, or choose your own colors in the <em>Bloglovin' "
 "Widget</em> section of the <a href='%s'>Customizer</a>."
 msgstr ""
-"Select a style from below, or choose your own colors in the <em>Bloglovin' "
-"Widget</em> section of the <a href='%s'>Customiser</a>."
+"Selecteer een stijl hieronder, of kies je eigen kleuren in de Bloglovin' "
+"Widget sectie van de <a href='%s'>Bewerker</a>."
 
 #: ../bloglovin-widget.php:301
 msgid "Widget style:"
-msgstr ""
+msgstr "Widget stijl:"
 
 #: ../bloglovin-widget.php:304 ../bloglovin-widget.php:308
 #: ../bloglovin-widget.php:312 ../bloglovin-widget.php:316
 #: ../bloglovin-widget.php:320 ../bloglovin-widget.php:324
 msgid "Style"
-msgstr ""
+msgstr "Stijl"
 
 #: ../inc/customizer.php:11
 msgid "Use these options to style your Bloglovin' Widget."
-msgstr ""
+msgstr "Gebruik deze opties om je Bloglovin' Widget te stijlen."
 
 #: ../inc/customizer.php:27
 msgid "Background color"
-msgstr "Background colour"
+msgstr "Achtergrondkleur"
 
 #: ../inc/customizer.php:44
 msgid "Text color"
-msgstr "Text colour"
+msgstr "Tekstkleur"
 
 #: ../inc/customizer.php:61
 msgid "Widget Icon"
-msgstr ""
+msgstr "Widget icoon"
 
 #: ../inc/customizer.php:64
 msgid "Heart"
-msgstr ""
+msgstr "Hart"
 
 #: ../inc/customizer.php:65
 msgid "Plus"
@@ -158,4 +175,15 @@ msgstr ""
 
 #: ../inc/customizer.php:66
 msgid "None"
-msgstr ""
+msgstr "Geen"
+
+#~ msgid ""
+#~ "Get 10% off any order at <a href='http://www.pipdig.co/products/premade-"
+#~ "wordpress-themes/?"
+#~ "utm_source=wordpress&utm_medium=bloglovin&utm_campaign=bloglovin' "
+#~ "target='_blank'>www.pipdig.co</a> by using coupon code 'nextlevel'."
+#~ msgstr ""
+#~ "Je kunt onze creaties vinden op <a href='http://www.pipdig.co/products/"
+#~ "premade-wordpress-themes/?"
+#~ "utm_source=wordpress&utm_medium=bloglovin&utm_campaign=bloglovin' "
+#~ "target='_blank'>www.pipdig.co</a>."

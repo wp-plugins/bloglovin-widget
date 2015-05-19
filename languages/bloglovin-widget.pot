@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bloglovin Widget\n"
-"POT-Creation-Date: 2015-05-16 20:45-0000\n"
-"PO-Revision-Date: 2015-05-16 20:45-0000\n"
+"POT-Creation-Date: 2015-05-18 12:29-0000\n"
+"PO-Revision-Date: 2015-05-18 12:29-0000\n"
 "Last-Translator: \n"
 "Language-Team: pipdig <hello@pipdig.co>\n"
 "Language: en\n"
@@ -39,67 +39,73 @@ msgstr ""
 msgid "Bloglovin' link:"
 msgstr ""
 
-#: ../bloglovin-widget.php:143
-msgid "Total count:"
+#: ../bloglovin-widget.php:140
+msgid ""
+"Do you speak multiple languages? We are looking for people to translate this "
+"theme. <a href='http://www.pipdig.co/contact' target='_blank'>Contact us</a> "
+"for details."
 msgstr ""
 
 #: ../bloglovin-widget.php:144
+msgid "Total count:"
+msgstr ""
+
+#: ../bloglovin-widget.php:145
 #, php-format
 msgid ""
 "Success! You can now use the widget to display your count by going to the <a "
 "href='%s'>Widgets section</a> of the dashboard."
 msgstr ""
 
-#: ../bloglovin-widget.php:145
+#: ../bloglovin-widget.php:146
 msgid ""
 "You can also display your count in any post/page by using the shortcode "
 "<strong>[bloglovin_count]</strong>."
 msgstr ""
 
-#: ../bloglovin-widget.php:148
+#: ../bloglovin-widget.php:149
 msgid ""
 "Your total follower count will be displayed here after you add your link "
 "above and click save"
 msgstr ""
 
-#: ../bloglovin-widget.php:154
+#: ../bloglovin-widget.php:155
 msgid "Looking for a more professional WordPress theme?"
 msgstr ""
 
-#: ../bloglovin-widget.php:155
-#, php-format
+#: ../bloglovin-widget.php:156
 msgid ""
-"Get 10% off any order at <a href='http://www.pipdig.co/products/premade-"
+"Get 10&#37; off any order at <a href='http://www.pipdig.co/products/premade-"
 "wordpress-themes/?"
 "utm_source=wordpress&utm_medium=bloglovin&utm_campaign=bloglovin' "
 "target='_blank'>www.pipdig.co</a> by using coupon code 'nextlevel'."
 msgstr ""
 
-#: ../bloglovin-widget.php:221
+#: ../bloglovin-widget.php:222
 msgid "Display your Bloglovin' follower count."
 msgstr ""
 
-#: ../bloglovin-widget.php:222 ../inc/customizer.php:9
+#: ../bloglovin-widget.php:223 ../inc/customizer.php:9
 msgid "Bloglovin' Widget"
 msgstr ""
 
-#: ../bloglovin-widget.php:252 ../bloglovin-widget.php:255
-#: ../bloglovin-widget.php:258 ../bloglovin-widget.php:261
-#: ../bloglovin-widget.php:264 ../bloglovin-widget.php:267
+#: ../bloglovin-widget.php:253 ../bloglovin-widget.php:256
+#: ../bloglovin-widget.php:259 ../bloglovin-widget.php:262
+#: ../bloglovin-widget.php:265 ../bloglovin-widget.php:268
 msgid "Followers on Bloglovin'"
 msgstr ""
 
-#: ../bloglovin-widget.php:272
+#: ../bloglovin-widget.php:273
 msgid ""
 "Widget setup not complete. Please go to Settings > Bloglovin' in the "
 "dashboard"
 msgstr ""
 
-#: ../bloglovin-widget.php:286
+#: ../bloglovin-widget.php:287
 msgid "Widget Title: (leave blank for no title)"
 msgstr ""
 
-#: ../bloglovin-widget.php:296
+#: ../bloglovin-widget.php:297
 #, php-format
 msgid ""
 "This widget will display your total Bloglovin' follower count. Note that you "
@@ -107,20 +113,20 @@ msgid ""
 "for this to work."
 msgstr ""
 
-#: ../bloglovin-widget.php:297
+#: ../bloglovin-widget.php:298
 #, php-format
 msgid ""
 "Select a style from below, or choose your own colors in the <em>Bloglovin' "
 "Widget</em> section of the <a href='%s'>Customizer</a>."
 msgstr ""
 
-#: ../bloglovin-widget.php:300
+#: ../bloglovin-widget.php:301
 msgid "Widget style:"
 msgstr ""
 
-#: ../bloglovin-widget.php:303 ../bloglovin-widget.php:307
-#: ../bloglovin-widget.php:311 ../bloglovin-widget.php:315
-#: ../bloglovin-widget.php:319 ../bloglovin-widget.php:323
+#: ../bloglovin-widget.php:304 ../bloglovin-widget.php:308
+#: ../bloglovin-widget.php:312 ../bloglovin-widget.php:316
+#: ../bloglovin-widget.php:320 ../bloglovin-widget.php:324
 msgid "Style"
 msgstr ""
 

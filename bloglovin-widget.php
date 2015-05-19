@@ -2,7 +2,7 @@
 /*
 Plugin Name: Bloglovin Widget
 Plugin URI: http://wordpress.org/extend/plugins/bloglovin-widget/
-Version: 1.0
+Version: 1.1
 Author: pipdig
 Description: Display your Bloglovin follower count via a widget or shortcode.
 Text Domain: bloglovin-widget
@@ -137,6 +137,7 @@ function pipdig_bloglovin_menu_page() {
 <p class="submit">
 <input type="submit" name="Submit" class="button-primary" value="<?php esc_attr_e('Save Changes') ?>" />
 </p>
+<p style="font-style:italic;"><?php _e("Do you speak multiple languages? We are looking for people to translate this theme. <a href='http://www.pipdig.co/contact' target='_blank'>Contact us</a> for details.", 'bloglovin-widget'); ?></p>
 <hr>
 <?php $bloglovin_count = get_option('pipdig_bloglovin_follower_count'); ?>
 <?php if ($bloglovin_count) { ?>
@@ -152,7 +153,7 @@ function pipdig_bloglovin_menu_page() {
 <hr>
 <div>
 <h2><?php _e('Looking for a more professional WordPress theme?', 'bloglovin-widget' ); ?></h2>
-<p><?php _e("Get 10% off any order at <a href='http://www.pipdig.co/products/premade-wordpress-themes/?utm_source=wordpress&utm_medium=bloglovin&utm_campaign=bloglovin' target='_blank'>www.pipdig.co</a> by using coupon code 'nextlevel'.", 'bloglovin-widget'); ?></p>
+<p><?php _e("Get 10&#37; off any order at <a href='http://www.pipdig.co/products/premade-wordpress-themes/?utm_source=wordpress&utm_medium=bloglovin&utm_campaign=bloglovin' target='_blank'>www.pipdig.co</a> by using coupon code 'nextlevel'.", 'bloglovin-widget'); ?></p>
 <a href="http://www.pipdig.co/products/premade-wordpress-themes/?utm_source=wordpress&utm_medium=bloglovin&utm_campaign=bloglovin" target="_blank"><img src="http://pipdigz.co.uk/img/bloglovin-widget-banner1.png"/></a>
 </div>
 <?php
