@@ -137,7 +137,7 @@ function pipdig_bloglovin_menu_page() {
 <p class="submit">
 <input type="submit" name="Submit" class="button-primary" value="<?php esc_attr_e('Save Changes') ?>" />
 </p>
-<p style="font-style:italic;"><?php _e("Do you speak multiple languages? We are looking for people to translate this theme. <a href='http://www.pipdig.co/contact' target='_blank'>Contact us</a> for details.", 'bloglovin-widget'); ?></p>
+<p style="font-style:italic;"><?php _e("Do you speak multiple languages? We are looking for people to translate this plugin. <a href='http://www.pipdig.co/contact' target='_blank'>Contact us</a> for details.", 'bloglovin-widget'); ?></p>
 <hr>
 <?php $bloglovin_count = get_option('pipdig_bloglovin_follower_count'); ?>
 <?php if ($bloglovin_count) { ?>

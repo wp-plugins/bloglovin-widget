@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bloglovin Widget\n"
-"POT-Creation-Date: 2015-05-18 12:29-0000\n"
-"PO-Revision-Date: 2015-05-18 12:29-0000\n"
+"POT-Creation-Date: 2015-05-20 13:31-0000\n"
+"PO-Revision-Date: 2015-05-20 13:31-0000\n"
 "Last-Translator: \n"
 "Language-Team: pipdig <hello@pipdig.co>\n"
 "Language: en\n"
@@ -42,8 +42,8 @@ msgstr ""
 #: ../bloglovin-widget.php:140
 msgid ""
 "Do you speak multiple languages? We are looking for people to translate this "
-"theme. <a href='http://www.pipdig.co/contact' target='_blank'>Contact us</a> "
-"for details."
+"plugin. <a href='http://www.pipdig.co/contact' target='_blank'>Contact us</"
+"a> for details."
 msgstr ""
 
 #: ../bloglovin-widget.php:144
