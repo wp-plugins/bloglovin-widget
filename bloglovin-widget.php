@@ -82,32 +82,22 @@ function pipdig_bloglovin_menu_page() {
 <?php
 	// initial scrape on save (can we function this?)
 	if ($opt_val) {
-		$bloglovin = file_get_contents($opt_val); //get the html returned from the following url
+		$bloglovin = file_get_contents($opt_val);
 		$bloglovin_doc = new DOMDocument();
 
-		libxml_use_internal_errors(TRUE); //disable libxml errors
+		libxml_use_internal_errors(TRUE);
 
-		if(!empty($bloglovin)){ //if any html is actually returned
-
+		if(!empty($bloglovin)){
 			$bloglovin_doc->loadHTML($bloglovin);
-			libxml_clear_errors(); //remove errors for yucky html
-
+			libxml_clear_errors();
 			$bloglovin_xpath = new DOMXPath($bloglovin_doc);
-
-			// get contents of div class num from bloglovin, e.g. <div class="num">11 671</div>
 			$bloglovin_row = $bloglovin_xpath->query('//div[@class="num"]');
 
 			if($bloglovin_row->length > 0){
 				foreach($bloglovin_row as $row){
 					$followers = $row->nodeValue;
-					
-					// strip out spaces
 					$followers = str_replace(' ', '', $followers);
-					
-					// sanitize as integer
 					$followers_int = intval( $followers );
-					
-					// store in database
 					update_option('pipdig_bloglovin_follower_count', $followers_int);
 					
 				}
@@ -144,7 +134,7 @@ function pipdig_bloglovin_menu_page() {
 <h2><?php _e("Total count:", 'bloglovin-widget' ); ?></strong> <?php echo $bloglovin_count; ?></h2>
 <p><?php $widgets_url = admin_url( 'widgets.php' ); printf(__("Success! You can now use the widget to display your count by going to the <a href='%s'>Widgets section</a> of the dashboard.", 'bloglovin-widget'), $widgets_url ); ?></p>
 <p><?php _e("You can also display your count in any post/page by using the shortcode <strong>[bloglovin_count]</strong>.", 'bloglovin-widget' ); ?></p>
-<?php //_e("For geeks: use <strong>do_action('bloglovin_count_here');</strong> to call the integer in your theme or plugin.", 'bloglovin-widget' ) ?></p>
+<?php // do_action('bloglovin_count_here'); ?>
 <?php } else { ?>
 <p><?php _e("Your total follower count will be displayed here after you add your link above and click save", 'bloglovin-widget' ); ?>.</p>
 <?php } //end if ?>
@@ -161,7 +151,7 @@ function pipdig_bloglovin_menu_page() {
 
 
 /**
- * Get follower count from Bloglovin' and attach to wp cron
+ * Get follower count
  *
  * @since 1.0
  */
@@ -177,34 +167,22 @@ function pipdig_bl_plugin_setup_schedule() {
 add_action( 'pipdig_bl_plugin_twicedaily_event', 'pipdig_bl_plugin_do_this_twicedaily' );
 function pipdig_bl_plugin_do_this_twicedaily() {
 	$bloglovin_url = get_option( 'pipdig_bloglovin_plugin_url' );
-	$bloglovin = file_get_contents($bloglovin_url); //get the html returned from the following url
+	$bloglovin = file_get_contents($bloglovin_url);
 	$bloglovin_doc = new DOMDocument();
 
-	libxml_use_internal_errors(TRUE); //disable libxml errors
+	libxml_use_internal_errors(TRUE);
 
-	if(!empty($bloglovin)){ //if any html is actually returned
-
+	if(!empty($bloglovin)){
 		$bloglovin_doc->loadHTML($bloglovin);
-		libxml_clear_errors(); //remove errors for yucky html
-
+		libxml_clear_errors();
 		$bloglovin_xpath = new DOMXPath($bloglovin_doc);
-
-		// get contents of div class num from bloglovin, e.g. <div class="num">11 671</div>
 		$bloglovin_row = $bloglovin_xpath->query('//div[@class="num"]');
-
 		if($bloglovin_row->length > 0){
 			foreach($bloglovin_row as $row){
 				$followers = $row->nodeValue;
-				
-				// strip out spaces
 				$followers = str_replace(' ', '', $followers);
-				
-				// sanitize as integer
 				$followers_int = intval( $followers );
-				
-				// store in database
 				update_option('pipdig_bloglovin_follower_count', $followers_int);
-				
 			}
 		}
 	}
@@ -360,9 +338,8 @@ add_shortcode( 'bloglovin_count', 'pipdig_bloglovin_shortcode' );
 
 
 /**
- * Template code integer call.
+ * Integer call.
  * 
- * Use " do_action('bloglovin_count_here'); " to call integer in templates
  * http://relearningtheweb.blogspot.com/2012/12/wordpress-create-custom-action-hook-in.html
  * 
  * @since 1.0
@@ -382,7 +359,7 @@ do_action('bloglovin_count_here');
 
 /**
  * Add styles to head
- *
+ * (need to make this conditional in future release)
  * @since 1.0
  */
 function bloglovin_widget_styles() {
