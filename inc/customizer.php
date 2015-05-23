@@ -31,6 +31,23 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'bloglo
 	)
 );
 
+// border color
+$wp_customize->add_setting('bloglovin_widget_border_color',
+	array(
+		'default' => '#000000',
+		//'transport'=>'postMessage',
+		'sanitize_callback' => 'sanitize_hex_color',
+	)
+);
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'bloglovin_widget_border_color',
+	array(
+		'label' => __( 'Border color', 'bloglovin-widget' ),
+		'section' => 'pipdig_bloglovin_widget',
+		'settings' => 'bloglovin_widget_border_color',
+	)
+	)
+);
+
 // text color
 $wp_customize->add_setting('bloglovin_widget_text_color',
 	array(
@@ -63,7 +80,7 @@ $wp_customize->add_control('bloglovin_widget_icon',
 		'choices' => array(
 			'heart' => __( 'Heart', 'bloglovin-widget' ),
 			'plus' => __( 'Plus', 'bloglovin-widget' ),
-			'' => __( 'None', 'bloglovin-widget' ),
+			'none' => __( 'None', 'bloglovin-widget' ),
 		),
 	)
 );
@@ -111,17 +128,24 @@ function pipdig_bloglovin_widget_customizer_head_styles() {
 
 $output_bloglovin_widget_background_color = '';
 $output_bloglovin_widget_text_color = '';
+$output_bloglovin_widget_border_color = '';
 
 	// background color
-	$bloglovin_widget_background_color = get_theme_mod( 'bloglovin_widget_background_color' ); 
-	if ( ($bloglovin_widget_background_color != '#000000' && $bloglovin_widget_background_color != null) ) :
-		$output_bloglovin_widget_background_color = '.wp-bloglovin-widget{background:' . $bloglovin_widget_background_color . ';border-color:' . $bloglovin_widget_background_color . '}';
+	$bloglovin_widget_background_color = get_theme_mod( 'bloglovin_widget_background_color', '#000000' ); 
+	if ($bloglovin_widget_background_color != '#000000' ) :
+		$output_bloglovin_widget_background_color = '.wp-bloglovin-widget{background:' . $bloglovin_widget_background_color . '}';
+	endif;
+	
+	// border color
+	$bloglovin_widget_border_color = get_theme_mod( 'bloglovin_widget_border_color', '#000000' ); 
+	if ($bloglovin_widget_border_color != '#000000' ) :
+		$output_bloglovin_widget_border_color = '.wp-bloglovin-widget{border:1px solid ' . $bloglovin_widget_border_color . '}';
 	endif;
 	
 	// text color
 	$bloglovin_widget_text_color = get_theme_mod( 'bloglovin_widget_text_color' ); 
-	if ( ($bloglovin_widget_text_color != '#000000' && $bloglovin_widget_text_color != null) ) :
-		$output_bloglovin_widget_text_color = '.wp-bloglovin-widget,.wp-bloglovin-widget.bloglovin-widget-style-1{color:' . $bloglovin_widget_text_color . '!important}';
+	if ($bloglovin_widget_text_color) :
+		$output_bloglovin_widget_text_color = '.wp-bloglovin-widget,.wp-bloglovin-widget.bloglovin-widget-style-1,.wp-bloglovin-widget .fa{color:' . $bloglovin_widget_text_color . '!important}';
 	endif;
 
 	
@@ -129,6 +153,7 @@ $output_bloglovin_widget_text_color = '';
 echo '<!-- Bloglovin Widget --><style>'
 . $output_bloglovin_widget_background_color 
 . $output_bloglovin_widget_text_color 
+. $output_bloglovin_widget_border_color 
 . '</style><!-- /Bloglovin Widget -->';
 
 }

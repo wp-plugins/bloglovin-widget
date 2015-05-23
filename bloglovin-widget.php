@@ -2,7 +2,7 @@
 /*
 Plugin Name: Bloglovin Widget
 Plugin URI: http://wordpress.org/extend/plugins/bloglovin-widget/
-Version: 1.1
+Version: 1.1.1
 Author: pipdig
 Description: Display your Bloglovin follower count via a widget or shortcode.
 Text Domain: bloglovin-widget
@@ -151,7 +151,7 @@ function pipdig_bloglovin_menu_page() {
 
 
 /**
- * Get follower count
+ * The count
  *
  * @since 1.0
  */
@@ -225,6 +225,18 @@ class pipdig_widget_bloglovin extends WP_Widget {
 			$bloglovin_icon = '<i class="fa fa-heart"></i>';
 		} else {
 			$bloglovin_icon = '<i class="fa fa-' . $icon_type . '"></i>';
+		}
+		switch ( $icon_type ) {
+			case 'heart':
+				 $bloglovin_icon = '<i class="fa fa-heart"></i>';
+				break;
+			case 'plus':
+				 $bloglovin_icon = '<i class="fa fa-plus"></i>';
+				break;
+			case 'none':
+				 $bloglovin_icon = '';
+				break;
+
 		}
 		switch ( $style_select ) {
 			case '1':
@@ -339,8 +351,6 @@ add_shortcode( 'bloglovin_count', 'pipdig_bloglovin_shortcode' );
 
 /**
  * Integer call.
- * 
- * http://relearningtheweb.blogspot.com/2012/12/wordpress-create-custom-action-hook-in.html
  * 
  * @since 1.0
  */

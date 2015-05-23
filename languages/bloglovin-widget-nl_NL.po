@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bloglovin Widget\n"
-"POT-Creation-Date: 2015-05-20 13:31-0000\n"
-"PO-Revision-Date: 2015-05-20 13:31-0000\n"
+"POT-Creation-Date: 2015-05-23 23:41-0000\n"
+"PO-Revision-Date: 2015-05-23 23:42-0000\n"
 "Last-Translator: \n"
 "Language-Team: pipdig <hello@pipdig.co>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.6\n"
+"X-Generator: Poedit 1.8\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e\n"
@@ -27,19 +27,19 @@ msgstr "Je hebt onvoldoende rechten voor toegang van deze pagina."
 msgid "Settings saved."
 msgstr "Instellingen opgeslagen."
 
-#: ../bloglovin-widget.php:126
+#: ../bloglovin-widget.php:116
 msgid "Enter the link to your blog's feed on Bloglovin'"
 msgstr "Voer hier de link naar je Bloglovin' feed toe"
 
-#: ../bloglovin-widget.php:131
+#: ../bloglovin-widget.php:121
 msgid "For example:"
 msgstr "Bijvoorbeeld:"
 
-#: ../bloglovin-widget.php:134
+#: ../bloglovin-widget.php:124
 msgid "Bloglovin' link:"
 msgstr ""
 
-#: ../bloglovin-widget.php:140
+#: ../bloglovin-widget.php:130
 msgid ""
 "Do you speak multiple languages? We are looking for people to translate this "
 "plugin. <a href='http://www.pipdig.co/contact' target='_blank'>Contact us</"
@@ -48,11 +48,11 @@ msgstr ""
 "We willen Ilse graag bedanken voor het vertalen van deze plugin. Bekijk snel "
 "haar blog op <a href='http://www.phood.nl' target='_blank'>www.phood.nl</a>!"
 
-#: ../bloglovin-widget.php:144
+#: ../bloglovin-widget.php:134
 msgid "Total count:"
 msgstr "Totale teller:"
 
-#: ../bloglovin-widget.php:145
+#: ../bloglovin-widget.php:135
 #, php-format
 msgid ""
 "Success! You can now use the widget to display your count by going to the <a "
@@ -61,7 +61,7 @@ msgstr ""
 "Gelukt! Je kunt nu de widget gebruiken om de teller te tonen door naar <a "
 "href='%s'>Weergave > Widgets</a> te gaan."
 
-#: ../bloglovin-widget.php:146
+#: ../bloglovin-widget.php:136
 msgid ""
 "You can also display your count in any post/page by using the shortcode "
 "<strong>[bloglovin_count]</strong>."
@@ -69,7 +69,7 @@ msgstr ""
 "Je kunt ook je teller tonen in elk bericht/pagina door de shortcode "
 "<strong>[bloglovin_count]</strong> te plaatsen. "
 
-#: ../bloglovin-widget.php:149
+#: ../bloglovin-widget.php:139
 msgid ""
 "Your total follower count will be displayed here after you add your link "
 "above and click save"
@@ -77,11 +77,11 @@ msgstr ""
 "Je totale volgersteller zal hier worden getoond nadat je je link hierboven "
 "hebt ingevoerd en op opslaan hebt geklikt"
 
-#: ../bloglovin-widget.php:155
+#: ../bloglovin-widget.php:145
 msgid "Looking for a more professional WordPress theme?"
 msgstr "Op zoek naar een nieuw WordPress thema?"
 
-#: ../bloglovin-widget.php:156
+#: ../bloglovin-widget.php:146
 msgid ""
 "Get 10&#37; off any order at <a href='http://www.pipdig.co/products/premade-"
 "wordpress-themes/?"
@@ -93,21 +93,21 @@ msgstr ""
 "utm_source=wordpress&utm_medium=bloglovin&utm_campaign=bloglovin' "
 "target='_blank'>www.pipdig.co</a>."
 
-#: ../bloglovin-widget.php:222
+#: ../bloglovin-widget.php:200
 msgid "Display your Bloglovin' follower count."
 msgstr "Deze widget zal je Bloglovin' volgersteller tonen."
 
-#: ../bloglovin-widget.php:223 ../inc/customizer.php:9
+#: ../bloglovin-widget.php:201 ../inc/customizer.php:9
 msgid "Bloglovin' Widget"
 msgstr ""
 
-#: ../bloglovin-widget.php:253 ../bloglovin-widget.php:256
-#: ../bloglovin-widget.php:259 ../bloglovin-widget.php:262
-#: ../bloglovin-widget.php:265 ../bloglovin-widget.php:268
+#: ../bloglovin-widget.php:243 ../bloglovin-widget.php:246
+#: ../bloglovin-widget.php:249 ../bloglovin-widget.php:252
+#: ../bloglovin-widget.php:255 ../bloglovin-widget.php:258
 msgid "Followers on Bloglovin'"
 msgstr "volgers op Bloglovin'"
 
-#: ../bloglovin-widget.php:273
+#: ../bloglovin-widget.php:263
 msgid ""
 "Widget setup not complete. Please go to Settings > Bloglovin' in the "
 "dashboard"
@@ -115,11 +115,11 @@ msgstr ""
 "Widget instellingen niet compleet. Ga naar Instellingen > Bloglovin' in het "
 "dashboard"
 
-#: ../bloglovin-widget.php:287
+#: ../bloglovin-widget.php:277
 msgid "Widget Title: (leave blank for no title)"
 msgstr "Widget titel (laat open voor geen titel):"
 
-#: ../bloglovin-widget.php:297
+#: ../bloglovin-widget.php:287
 #, php-format
 msgid ""
 "This widget will display your total Bloglovin' follower count. Note that you "
@@ -130,7 +130,7 @@ msgstr ""
 "je Bloglovin' link moet toevoegen aan <a href='%s'>de instellingen pagina</"
 "a> wil dit werken."
 
-#: ../bloglovin-widget.php:298
+#: ../bloglovin-widget.php:288
 #, php-format
 msgid ""
 "Select a style from below, or choose your own colors in the <em>Bloglovin' "
@@ -139,13 +139,13 @@ msgstr ""
 "Selecteer een stijl hieronder, of kies je eigen kleuren in de Bloglovin' "
 "Widget sectie van de <a href='%s'>Bewerker</a>."
 
-#: ../bloglovin-widget.php:301
+#: ../bloglovin-widget.php:291
 msgid "Widget style:"
 msgstr "Widget stijl:"
 
-#: ../bloglovin-widget.php:304 ../bloglovin-widget.php:308
-#: ../bloglovin-widget.php:312 ../bloglovin-widget.php:316
-#: ../bloglovin-widget.php:320 ../bloglovin-widget.php:324
+#: ../bloglovin-widget.php:294 ../bloglovin-widget.php:298
+#: ../bloglovin-widget.php:302 ../bloglovin-widget.php:306
+#: ../bloglovin-widget.php:310 ../bloglovin-widget.php:314
 msgid "Style"
 msgstr "Stijl"
 
@@ -158,22 +158,26 @@ msgid "Background color"
 msgstr "Achtergrondkleur"
 
 #: ../inc/customizer.php:44
+msgid "Border color"
+msgstr ""
+
+#: ../inc/customizer.php:61
 msgid "Text color"
 msgstr "Tekstkleur"
 
-#: ../inc/customizer.php:61
+#: ../inc/customizer.php:78
 msgid "Widget Icon"
 msgstr "Widget icoon"
 
-#: ../inc/customizer.php:64
+#: ../inc/customizer.php:81
 msgid "Heart"
 msgstr "Hart"
 
-#: ../inc/customizer.php:65
+#: ../inc/customizer.php:82
 msgid "Plus"
 msgstr ""
 
-#: ../inc/customizer.php:66
+#: ../inc/customizer.php:83
 msgid "None"
 msgstr "Geen"
 
