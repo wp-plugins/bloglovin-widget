@@ -13,7 +13,7 @@ $wp_customize->add_section( 'pipdig_bloglovin_widget',
 	) 
 );
 
-
+/*
 // background color
 $wp_customize->add_setting('bloglovin_widget_background_color',
 	array(
@@ -84,7 +84,7 @@ $wp_customize->add_control('bloglovin_widget_icon',
 		),
 	)
 );
-
+*/
 }
 
 

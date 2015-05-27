@@ -2,9 +2,9 @@
 /*
 Plugin Name: Bloglovin Widget
 Plugin URI: http://wordpress.org/extend/plugins/bloglovin-widget/
-Version: 1.1.1
+Version: 1.1.2
 Author: pipdig
-Description: Display your Bloglovin follower count via a widget or shortcode.
+Description: Display your Bloglovin' follower count in style.
 Text Domain: bloglovin-widget
 Author URI: http://www.pipdig.co/
 License: GPLv2 or later
@@ -133,7 +133,7 @@ function pipdig_bloglovin_menu_page() {
 <?php if ($bloglovin_count) { ?>
 <h2><?php _e("Total count:", 'bloglovin-widget' ); ?></strong> <?php echo $bloglovin_count; ?></h2>
 <p><?php $widgets_url = admin_url( 'widgets.php' ); printf(__("Success! You can now use the widget to display your count by going to the <a href='%s'>Widgets section</a> of the dashboard.", 'bloglovin-widget'), $widgets_url ); ?></p>
-<p><?php _e("You can also display your count in any post/page by using the shortcode <strong>[bloglovin_count]</strong>.", 'bloglovin-widget' ); ?></p>
+<p><?php //_e("You can also display your count in any post/page by using the shortcode <strong>[bloglovin_count]</strong>.", 'bloglovin-widget' ); ?></p>
 <?php // do_action('bloglovin_count_here'); ?>
 <?php } else { ?>
 <p><?php _e("Your total follower count will be displayed here after you add your link above and click save", 'bloglovin-widget' ); ?>.</p>
@@ -220,7 +220,7 @@ class pipdig_widget_bloglovin extends WP_Widget {
 	$bloglovin_url = get_option('pipdig_bloglovin_plugin_url');
 
     if (!empty($bloglovin_count)) {
-		$icon_type = get_theme_mod('bloglovin_widget_icon');
+		$icon_type = get_theme_mod('bloglovin_widget_icon', 'heart');
 		if (empty($icon_type)) {
 			$bloglovin_icon = '<i class="fa fa-heart"></i>';
 		} else {
@@ -285,7 +285,7 @@ class pipdig_widget_bloglovin extends WP_Widget {
 	$cust_url = admin_url( 'customize.php' );
 	?>
 	<p><?php printf(__("This widget will display your total Bloglovin' follower count. Note that you will need to add your Bloglovin' link to <a href='%s'>the options page</a> for this to work.", 'bloglovin-widget'), $options_url ); ?></p>
-	<p><?php printf(__("Select a style from below, or choose your own colors in the <em>Bloglovin' Widget</em> section of the <a href='%s'>Customizer</a>.", 'bloglovin-widget'), $cust_url ); ?></p>
+	<p><?php //printf(__("Select a style from below, or choose your own colors in the <em>Bloglovin' Widget</em> section of the <a href='%s'>Customizer</a>.", 'bloglovin-widget'), $cust_url ); ?></p>
 	
 	<p>
 		<legend><h3><?php _e('Widget style:', 'bloglovin-widget'); ?></h3></legend><br />
