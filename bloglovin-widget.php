@@ -2,7 +2,7 @@
 /*
 Plugin Name: Bloglovin Widget
 Plugin URI: http://wordpress.org/extend/plugins/bloglovin-widget/
-Version: 1.1.2
+Version: 1.1.3
 Author: pipdig
 Description: Display your Bloglovin' follower count in style.
 Text Domain: bloglovin-widget

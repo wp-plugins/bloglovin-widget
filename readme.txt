@@ -15,7 +15,7 @@ Tired of the default Bloglovin' widgets? Well now you can display your follower 
 
 Simply add the link to your Bloglovin' page and this plugin will automatically fetch your follower count.  You can then display this anywhere you like using our stylish widget options.
 
-This widget was developed by [pipdig](http://www.pipdig.co?utm_source=wordpress&utm_medium=wprepo&utm_campaign=bloglovin).
+This widget was developed by [pipdig](http://www.pipdig.co?utm_source=wordpress&utm_medium=wprepo&utm_campaign=bloglovin). We make themes too, check them out :)
 
 == Installation ==
 
@@ -44,10 +44,13 @@ The follower count is updated twice per day via the WordPress cron.
 
 == Changelog ==
 
-= 1.1 =
+= 1.1.3 =
+* Added el (Greek) language - thanks [Layla](http://sprinklesofstyle.co.uk)!
+
+= 1.1.2 =
 * Styling improvements.
-* Added NL language - thanks [Ilse](http://www.phood.nl)!
-* Added FR language - thanks [Alexia](http://thebeautynotebook.com)!
+* Added NL (Dutch) language - thanks [Ilse](http://www.phood.nl)!
+* Added FR (French) language - thanks [Alexia](http://thebeautynotebook.com)!
 
 = 1.0 =
 * Initial release!

@@ -1,0 +1,178 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bloglovin Widget\n"
+"POT-Creation-Date: 2015-06-02 20:16-0000\n"
+"PO-Revision-Date: 2015-06-02 20:26-0000\n"
+"Last-Translator: \n"
+"Language-Team: pipdig <hello@pipdig.co>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPathExcluded-0: ../.git\n"
+"X-Poedit-SearchPathExcluded-1: ../js\n"
+"X-Poedit-SearchPathExcluded-2: ../img\n"
+"X-Poedit-SearchPathExcluded-3: ../css\n"
+
+#: ../bloglovin-widget.php:59
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: ../bloglovin-widget.php:81
+msgid "Settings saved."
+msgstr "Οι ρυθμισεις αποθηκευτηκαν"
+
+#: ../bloglovin-widget.php:116
+msgid "Enter the link to your blog's feed on Bloglovin'"
+msgstr "Βαλτε το συνδεσμο στο blog σας για το feed στο Bloglovin."
+
+#: ../bloglovin-widget.php:121
+msgid "For example:"
+msgstr "Για παραδειγμα"
+
+#: ../bloglovin-widget.php:124
+msgid "Bloglovin' link:"
+msgstr "Bloglovin συνδεσμος"
+
+#: ../bloglovin-widget.php:130
+msgid ""
+"Do you speak multiple languages? We are looking for people to translate this "
+"plugin. <a href='http://www.pipdig.co/contact' target='_blank'>Contact us</"
+"a> for details."
+msgstr " "
+
+#: ../bloglovin-widget.php:134
+msgid "Total count:"
+msgstr "Συνολικα ποσοι ακολουθουν"
+
+#: ../bloglovin-widget.php:135
+#, php-format
+msgid ""
+"Success! You can now use the widget to display your count by going to the <a "
+"href='%s'>Widgets section</a> of the dashboard."
+msgstr ""
+"Επιτυχια! Μπορειτε τωρα να χρησιμοποιησετε τα widget για να επιδειξετε ποσοι "
+"σας ακολουθουν πηγαινοντας στο <a href='%s'>τμημα Widgets</a> απο το ταμπλο "
+
+#: ../bloglovin-widget.php:136
+msgid ""
+"You can also display your count in any post/page by using the shortcode "
+"<strong>[bloglovin_count]</strong>."
+msgstr ""
+"Ακομα μπορειτε να επιδειξετε τον αριθμο που σας ακολουθει σε καθε ποστο/"
+"σελιδα χρησιμοποιωντας τον συντομο κωδικο <strong>[bloglovin_count]</strong>."
+
+#: ../bloglovin-widget.php:139
+msgid ""
+"Your total follower count will be displayed here after you add your link "
+"above and click save"
+msgstr ""
+"Ο συνολικος αριθμος που σας ακολουθειθα παρουσιαστει εδω μετα που θα "
+"προσθεσετε το παραπανω συνδεσμο και πατησετε αποταμιευση."
+
+#: ../bloglovin-widget.php:145
+msgid "Looking for a more professional WordPress theme?"
+msgstr "Κοιτατε για ποιο επαγγελματικο WordPress θεμα?"
+
+#: ../bloglovin-widget.php:146
+msgid ""
+"Get 10&#37; off any order at <a href='http://www.pipdig.co/products/premade-"
+"wordpress-themes/?"
+"utm_source=wordpress&utm_medium=bloglovin&utm_campaign=bloglovin' "
+"target='_blank'>www.pipdig.co</a> by using coupon code 'nextlevel'."
+msgstr " "
+
+#: ../bloglovin-widget.php:200
+msgid "Display your Bloglovin' follower count."
+msgstr "Παρουσιαστε αυτους που σας ακολουθουν στο Bloglovin"
+
+#: ../bloglovin-widget.php:201 ../inc/customizer.php:9
+msgid "Bloglovin' Widget"
+msgstr ""
+
+#: ../bloglovin-widget.php:243 ../bloglovin-widget.php:246
+#: ../bloglovin-widget.php:249 ../bloglovin-widget.php:252
+#: ../bloglovin-widget.php:255 ../bloglovin-widget.php:258
+msgid "Followers on Bloglovin'"
+msgstr "Οσοι σας ακολουθουν στο Bloglovin"
+
+#: ../bloglovin-widget.php:263
+msgid ""
+"Widget setup not complete. Please go to Settings > Bloglovin' in the "
+"dashboard"
+msgstr ""
+"Widget εγκατασταση δεν ολοκληρωθηκε. Παρακαλω πηγαινετε στις ρυθμισεις "
+">Bloglovin στο ταμπλο."
+
+#: ../bloglovin-widget.php:277
+msgid "Widget Title: (leave blank for no title)"
+msgstr "Widget Τιτλος (αφηστε κενο αν δεν θελετε τιτλο)"
+
+#: ../bloglovin-widget.php:287
+#, php-format
+msgid ""
+"This widget will display your total Bloglovin' follower count. Note that you "
+"will need to add your Bloglovin' link to <a href='%s'>the options page</a> "
+"for this to work."
+msgstr ""
+"Αυτο το widget θα δειξει συνολικα οσους σας ακολουθουν στο Bloglovin.<a "
+"href='%s'></a>"
+
+#: ../bloglovin-widget.php:288
+#, php-format
+msgid ""
+"Select a style from below, or choose your own colors in the <em>Bloglovin' "
+"Widget</em> section of the <a href='%s'>Customizer</a>."
+msgstr ""
+"Διαλεξτε ενα στυλ απο τα πιο κατω, η διαλεξτε τα δικα σας χρωματα στο "
+"<em>Bloglovin' Widget</em> τμημα απο <a href='%s'>για δικο σας στυλ </a>."
+
+#: ../bloglovin-widget.php:291
+msgid "Widget style:"
+msgstr "Widget στυλ."
+
+#: ../bloglovin-widget.php:294 ../bloglovin-widget.php:298
+#: ../bloglovin-widget.php:302 ../bloglovin-widget.php:306
+#: ../bloglovin-widget.php:310 ../bloglovin-widget.php:314
+msgid "Style"
+msgstr "Στυλ"
+
+#: ../inc/customizer.php:11
+msgid "Use these options to style your Bloglovin' Widget."
+msgstr ""
+"Χρησιμοποιειστε αυτες τις επιλογες για να να δωσετε το δικο σας υφος στο "
+"Bloglovin' Widget."
+
+#: ../inc/customizer.php:27
+msgid "Background color"
+msgstr "Χρωμα στο φοντο"
+
+#: ../inc/customizer.php:44
+msgid "Border color"
+msgstr ""
+
+#: ../inc/customizer.php:61
+msgid "Text color"
+msgstr "Χρωμα στη γραφη"
+
+#: ../inc/customizer.php:78
+msgid "Widget Icon"
+msgstr "Widget στην εικονα"
+
+#: ../inc/customizer.php:81
+msgid "Heart"
+msgstr "Καρδια"
+
+#: ../inc/customizer.php:82
+msgid "Plus"
+msgstr "Συν"
+
+#: ../inc/customizer.php:83
+msgid "None"
+msgstr "Κανενας/Τιποτα"
