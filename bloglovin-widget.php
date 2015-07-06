@@ -150,20 +150,12 @@ function pipdig_bloglovin_menu_page() {
 }
 
 
-/**
- * The count
- *
- * @since 1.0
- */
-// On an early action hook, check if the hook is scheduled - if not, schedule it.
 add_action( 'wp', 'pipdig_bl_plugin_setup_schedule' );
 function pipdig_bl_plugin_setup_schedule() {
 	if ( ! wp_next_scheduled( 'pipdig_bl_plugin_twicedaily_event' ) ) {
 		wp_schedule_event( time(), 'twicedaily', 'pipdig_bl_plugin_twicedaily_event'); //hourly, twicedaily or daily
 	}
 }
-
-// On the scheduled action hook, run a function.
 add_action( 'pipdig_bl_plugin_twicedaily_event', 'pipdig_bl_plugin_do_this_twicedaily' );
 function pipdig_bl_plugin_do_this_twicedaily() {
 	$bloglovin_url = get_option( 'pipdig_bloglovin_plugin_url' );
@@ -187,13 +179,6 @@ function pipdig_bl_plugin_do_this_twicedaily() {
 		}
 	}
 }
-
-
-/**
- * Widget
- *
- * @since 1.0
- */
 class pipdig_widget_bloglovin extends WP_Widget {
  
   public function __construct() {
@@ -335,25 +320,12 @@ add_action( 'widgets_init', create_function('', 'return register_widget("pipdig_
 
 
 
-/**
- * Shortcode - Unstyled integer
- *
- * @since 1.0
- */
 function pipdig_bloglovin_shortcode( $atts ){
 	$bloglovin_count = get_option('pipdig_bloglovin_follower_count');
 	return $bloglovin_count;
 }
 add_shortcode( 'bloglovin_count', 'pipdig_bloglovin_shortcode' );
 
-
-
-
-/**
- * Integer call.
- * 
- * @since 1.0
- */
 add_action('bloglovin_count_here', 'bloglovin_count_callback');
 function bloglovin_count_callback()
 {
@@ -365,22 +337,10 @@ function the_action()
 do_action('bloglovin_count_here');
 }
 
-
-
-/**
- * Add styles to head
- * (need to make this conditional in future release)
- * @since 1.0
- */
 function bloglovin_widget_styles() {
 	echo '<style>.wp-bloglovin-widget{display:block;max-width:276px;margin:0 auto;text-transform:uppercase;letter-spacing:1px;transition:all .25s ease-out;-o-transition:all .25s ease-out;-moz-transition:all .25s ease-out;-webkit-transition:all .25s ease-out}.wp-bloglovin-widget .fa{font-size:12px}.bloglovin-widget-style-1{padding:8px 15px;background:#bce7f5;border-radius:9px;color:#555!important;font:10px arial,sans-serif}.bloglovin-widget-style-1:hover{opacity:.8}.bloglovin-widget-style-2{padding:8px 15px;background:#000;color:#fff!important;font:10px arial,sans-serif}.bloglovin-widget-style-2:hover{opacity:.75}.bloglovin-widget-style-3{padding:8px 15px;background:#000;color:#fff!important;font:10px arial,sans-serif;border:1px solid #000;box-shadow:0 0 0 1px #fff inset,0 0 0 1px #000 inset}.bloglovin-widget-style-3:hover{opacity:.75}.bloglovin-widget-style-4{padding:8px 15px;background:#fff;color:#000!important;font:10px arial,sans-serif;border:1px solid #000}.bloglovin-widget-style-4:hover{opacity:.75}.bloglovin-widget-style-4 .fa{color:#000}.bloglovin-widget-style-5{padding:8px 15px;background:#fff;color:#000!important;border:1px dotted #ccc;font:10px arial,sans-serif}.bloglovin-widget-style-5:hover{opacity:.75}.bloglovin-widget-style-5 .fa{color:#000}.bloglovin-widget-style-6{padding:8px 15px;background:#fff;color:#222!important;font:10px arial,sans-serif;box-shadow:0 0 8px #bbb}.bloglovin-widget-style-6:hover{opacity:.7}.bloglovin-widget-style-6 .fa{color:#888}</style>';
 }
 add_filter('wp_head', 'bloglovin_widget_styles');
 
 
-/**
- * Add section to customizer
- *
- * @since 1.0
- */
 require_once('inc/customizer.php');
