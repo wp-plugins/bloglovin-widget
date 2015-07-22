@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Bloglovin Widget ===
 Contributors: pipdig
 Tags: bloglovin, bloglovin button, button, widget, followers, social, social counter, shortcode, feed, subscribe
 Requires at least: 3.6
@@ -11,11 +11,7 @@ A Bloglovin' Widget for WordPress which automatically displays your total follow
 
 == Description ==
 
-Please note: We now recommend that you display the official [Bloglovin' Button](https://wordpress.org/plugins/bloglovin-button/) rather than use this plugin. We initially made this plugin when the official Bloglovin' Widget was pretty ugly, but now it's very nice :)
-
-**How to use this widget**
-
-Simply add the link to your Bloglovin' page and this plugin will automatically fetch your follower count.  You can then display this anywhere you like using our stylish widget options.
+NOTE: This plugin has been replaced by the official [Bloglovin' Button](https://wordpress.org/plugins/bloglovin-button/). Please download that one instead!
 
 This widget was created by [pipdig](http://www.pipdig.co?utm_source=wordpress&utm_medium=wprepo&utm_campaign=bloglovin).
 
@@ -39,10 +35,6 @@ Nope! This plugin won't request any details other than a link to your blog's pro
 = Why hasn't my follower count updated? =
 
 The follower count is updated twice per day via the WordPress cron.
-
-== Screenshots ==
-
-1. Widget options. More styles coming soon!
 
 == Changelog ==
 
