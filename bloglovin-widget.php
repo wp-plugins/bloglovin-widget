@@ -32,10 +32,7 @@ GNU General Public License for more details.
 function bloglovin_widget_plugin_textdomain() {
 	$domain = 'bloglovin-widget';
 	$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
-
-	// wp-content/languages/plugin-name/plugin-name-en_GB.mo
 	load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain . '/' . $domain . '-' . $locale . '.mo' );
-	// wp-content/plugins/plugin-name/languages/plugin-name-en_GB.mo
 	load_plugin_textdomain( $domain, FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
 add_action( 'init', 'bloglovin_widget_plugin_textdomain' );
@@ -45,7 +42,7 @@ class pipdig_widget_bloglovin extends WP_Widget {
  
   public function __construct() {
       $widget_ops = array('classname' => 'pipdig_widget_bloglovin', 'description' => __("Display your Bloglovin' follower count.", 'bloglovin-widget') );
-      $this->WP_Widget('pipdig_widget_bloglovin', __("Bloglovin' Widget", 'bloglovin-widget'), $widget_ops);
+      parent::__construct('pipdig_widget_bloglovin', __("Bloglovin' Widget", 'bloglovin-widget'), $widget_ops);
   }
   
   function widget($args, $instance) {
@@ -71,7 +68,7 @@ class pipdig_widget_bloglovin extends WP_Widget {
    
     ?>
 
-	<p>This widget has been discontinued. Please use the <a href='https://wordpress.org/plugins/bloglovin-button/' target='_blank'>Bloglovin' Button</a> plugin instead.</p>
+	<p>This widget has been discontinued. You should delete this plugin and use the <a href='https://wordpress.org/plugins/bloglovin-button/' target='_blank'>Bloglovin' Button</a> instead. If you would prefer to add a custom Bloglovin counter widget, you can do so with any of our <a href="http://www.pipdig.co?utm_source=wordpress&utm_medium=wprepo&utm_campaign=bloglovin" target="_blank">WordPress Themes</a>.</p>
 	
 
      <?php

@@ -2,8 +2,8 @@
 Contributors: pipdig
 Tags: bloglovin, bloglovin button, button, widget, followers, social, social counter, shortcode, feed, subscribe
 Requires at least: 3.6
-Tested up to: 4.2.2
-Stable tag: trunk
+Tested up to: 4.3
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,13 +38,11 @@ The follower count is updated twice per day via the WordPress cron.
 
 == Changelog ==
 
-= 1.1.3 =
-* Added el (Greek) language - thanks [Layla](http://sprinklesofstyle.co.uk)!
+= 1.2.0 =
 
-= 1.1.2 =
-* Styling improvements.
-* Added NL (Dutch) language - thanks [Ilse](http://www.phood.nl)!
-* Added FR (French) language - thanks [Alexia](http://thebeautynotebook.com)!
+Updates to allow compatibility with the upcoming release of WordPress 4.3.
+
+NOTE: This plugin has been replaced by the official (and free) [Bloglovin' Button](https://wordpress.org/plugins/bloglovin-button/).  You should uninstall this plugin as soon as possible.  This plugin is now bundled with our premium [WordPress Themes](http://www.pipdig.co?utm_source=wordpress&utm_medium=wprepo&utm_campaign=bloglovin) instead.
 
 = 1.0 =
 * Initial release!
